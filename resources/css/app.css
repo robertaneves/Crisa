@@ -6,21 +6,14 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 @layer components {
-    /*
-    |--------------------------------------------------------------------------
-    | Começo do Layout Principal
-    |--------------------------------------------------------------------------
-    */
-
-
-    .main-header {
-        @apply bg-white shadow-md;
-    }
+    /* =========================================================================
+       Layout Principal (Desktop)
+    ========================================================================= */
 
     .main-header {
         @apply bg-white shadow-md;
@@ -34,179 +27,61 @@
     .logo-link {
         @apply flex items-center space-x-2;
     }
-
     .logo-image {
         @apply h-10;
     }
-
     .logo-text {
         @apply text-xl font-bold text-gray-800;
     }
 
-    .desktop-search {
-        @apply hidden md:flex w-1/2;
-    }
-
-    .search-input {
-        @apply w-full border border-gray-300 rounded-l-md px-4 py-2 focus:ring-violet-500 focus:border-transparent transition;
-    }
-
-    .search-button {
-        @apply bg-violet-600 text-white px-4 py-2 rounded-r-md hover:bg-violet-700 transition flex items-center;
-    }
-
-    .search-icon {
-        @apply h-5 w-5;
-    }
-
-    /* AÇÕES RÁPIDAS (ICONES) */
-    .quick-actions {
-        @apply flex items-center space-x-4;
-    }
-
-    .action-link {
-        @apply text-gray-600 hover:text-violet-600;
-    }
-
-    .action-icon {
-        @apply h-7 w-7;
-    }
-
-    .cart-link {
-        @apply relative;
-    }
-
-    .cart-count {
-        @apply absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-2 py-0.5;
-    }
-
-    /* Link da Conta */
-    .account-link-desktop {
-        @apply hidden sm:flex items-center;
-    }
-
-    .account-text {
-        @apply ml-2 text-sm font-medium;
-    }
-
-    /* Menu Mobile */
-    .mobile-menu-toggle {
-        @apply md:hidden text-2xl text-gray-700;
-    }
-
-    .mobile-menu {
-        @apply md:hidden bg-white border-t border-gray-200;
-    }
-
-    .mobile-search-wrapper {
-        @apply p-4;
-    }
-
-    .mobile-search-form {
-        @apply flex;
-    }
-
-    .mobile-nav {
-        @apply flex flex-col p-4 pt-0 space-y-1;
-    }
-
-    .mobile-nav-link {
-        @apply block px-4 py-2 rounded-md text-gray-700 font-medium hover:bg-violet-50 hover:text-violet-600 transition;
-    }
-
-    .account-link-mobile {
-        @apply sm:hidden border-t mt-2 pt-3;
-    }
-
-    /* Formulário de Busca */
+    /* Busca Desktop */
+    .desktop-search,
     .desktop-search-form {
         @apply hidden md:flex w-1/2;
     }
-
     .search-input {
-        @apply w-full border border-gray-300 rounded-l-md px-4 py-2 focus:ring-violet-500 focus:border-transparent transition;
+        @apply w-full border border-gray-300 rounded-l-md px-4 py-2
+            focus:ring-violet-500 focus:border-transparent transition;
     }
-
     .search-button {
-        @apply bg-violet-600 text-white px-4 py-2 rounded-r-md hover:bg-violet-700 transition flex items-center;
+        @apply bg-violet-600 text-white px-4 py-2 rounded-r-md
+            hover:bg-violet-700 transition flex items-center;
     }
-
     .search-icon {
         @apply h-5 w-5;
     }
 
-    /* Ações Rápidas (Ícones) */
+    /* Ações Rápidas */
     .quick-actions {
         @apply flex items-center space-x-4;
     }
-
     .action-link {
         @apply text-gray-600 hover:text-violet-600;
     }
-
     .action-icon {
         @apply h-7 w-7;
     }
-
     .cart-link {
         @apply relative;
     }
-
     .cart-count {
-        @apply absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-2 py-0.5;
+        @apply absolute -top-2 -right-3 bg-red-500 text-white text-xs
+            rounded-full px-2 py-0.5;
     }
 
-    /* Link da Conta */
+    /* Conta (Desktop) */
     .account-link-desktop {
         @apply hidden sm:flex items-center;
     }
-
     .account-text {
         @apply ml-2 text-sm font-medium;
     }
 
-    /* Menu Mobile */
-    .mobile-menu-toggle {
-        @apply md:hidden text-2xl text-gray-700;
-    }
+    /* =========================================================================
+       Formulário de Criação
+    ========================================================================= */
 
-    .mobile-menu {
-        @apply md:hidden bg-white border-t border-gray-200;
-    }
-
-    .mobile-search-wrapper {
-        @apply p-4;
-    }
-
-    .mobile-search-form {
-        @apply flex;
-    }
-
-    .mobile-nav {
-        @apply flex flex-col p-4 pt-0 space-y-1;
-    }
-
-    .mobile-nav-link {
-        @apply block px-4 py-2 rounded-md text-gray-700 font-medium hover:bg-violet-50 hover:text-violet-600 transition;
-    }
-
-    .account-link-mobile {
-        @apply sm:hidden border-t mt-2 pt-3;
-    }
-
-    /*
-    |--------------------------------------------------------------------------
-    | Fim do Layout Principal
-    |--------------------------------------------------------------------------
-    */
-
-
-    /*
-    |--------------------------------------------------------------------------
-    | Começo do Formulário de Criação
-    |--------------------------------------------------------------------------
-    */
-.form-page-container {
+    .form-page-container {
         @apply bg-gray-100 py-10;
     }
     .form-card {
@@ -243,19 +118,97 @@
         @apply text-gray-500 font-normal;
     }
     .form-input {
-        @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+        @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md
+            shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500
+            focus:border-indigo-500 sm:text-sm;
     }
     .form-footer {
         @apply flex justify-end pt-4;
     }
     .btn-primary {
-        @apply inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+        @apply inline-flex justify-center py-2 px-6 border border-transparent shadow-sm
+            text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
-    /* Classes utilitárias para o grid de endereço */
+
     .col-span-full {
         @apply lg:col-span-3;
     }
     .col-span-2 {
         @apply lg:col-span-2;
     }
+
+    /* =========================================================================
+       Formulário de Login 
+    ========================================================================= */
+
+    .body-bg {
+    @apply bg-gray-100 font-sans;
+}
+
+/* Containers e Cards */
+.login-container {
+    @apply flex items-center justify-center min-h-screen;
+}
+
+.login-card {
+    @apply w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg;
+}
+
+.card-header {
+    @apply text-center;
+}
+
+.card-title {
+    @apply text-3xl font-bold text-gray-800;
+}
+
+.card-subtitle {
+    @apply mt-2 text-gray-500;
+}
+
+.card-footer {
+    @apply text-sm text-center text-gray-500;
+}
+
+/* Formulário e seus elementos */
+.login-form {
+    @apply space-y-6;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-700;
+}
+
+.form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400;
+    @apply focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+.form-options {
+    @apply flex items-center justify-between;
+}
+
+.form-checkbox {
+    @apply w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500;
+}
+
+.form-error {
+    @apply mt-2 text-sm text-red-600;
+}
+
+/* Links e Botões */
+.link {
+    @apply font-medium text-indigo-600 hover:text-indigo-500;
+}
+
+.btn-primary {
+    @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600;
+    @apply hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+/* Aplicando a fonte Inter ao body, se estiver usando */
+body {
+    font-family: 'Inter', sans-serif;
+}
 }

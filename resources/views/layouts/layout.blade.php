@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +13,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-gray-100 font-sans"> 
+<body class="bg-gray-100 font-sans">
     <header class="main-header">
         <div class="header-container">
             <a href="{{ route('layout') }}" class="logo-link">
@@ -51,9 +52,14 @@
     <main>
         @yield('content')
     </main>
-    
+
     <footer>
         {{-- Seu rodapé aqui --}}
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <x-alertas />
 </body>
+
 </html>

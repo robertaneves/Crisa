@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('endereco', function (Blueprint $table) {
+        Schema::create('enderecos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->string('label');
             $table->string('rua');
             $table->string('numero');
             $table->string('complemento');
@@ -22,7 +21,6 @@ return new class extends Migration
             $table->string('cidade');
             $table->string('estado');
             $table->string('cep');
-            $table->boolean('is_default');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('endereco');
+        Schema::dropIfExists('enderecos');
     }
 };
