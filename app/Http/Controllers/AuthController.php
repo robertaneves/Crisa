@@ -24,8 +24,8 @@ class AuthController extends Controller
             if (!$autorizado) {
                 return back()->withInput()->with('error', 'Email ou senha inválido.');
             }
-            // return redirect()->route('index');
-
+            // return redirect()->route('cliente.mostrarCliente')->withInput()->with('success', 'Cliente cadastrado com sucesso.');
+            
         } catch (\Exception $e) {
             return back()->withInput()->with("error", "Email ou senha inválido");
         }

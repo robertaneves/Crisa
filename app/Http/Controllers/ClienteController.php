@@ -36,7 +36,7 @@ class ClienteController extends Controller{
                 'cidade' => $request->cidade,
                 'estado' => $request->estado
             ]);
-            return back()->withInput()->with('success', 'Cliente cadastrado com sucesso.');
+            return redirect()->route('login')->withInput()->with('success', 'Cliente cadastrado com sucesso.');
         } catch (\Exception $e) {
             DB::rollBack();
             return back()->withInput()->with('error', 'Cliente não cadastrado.');
