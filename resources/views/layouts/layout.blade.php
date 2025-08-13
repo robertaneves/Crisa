@@ -14,36 +14,56 @@
 </head>
 
 <body class="bg-gray-100 font-sans">
-    <header class="main-header">
-        <div class="header-container">
-            <a href="{{ route('layout') }}" class="logo-link">
-                <img src="#" alt="Logo" class="logo-image">
-                <span class="logo-text">Loja Crisa</span>
+    {{-- Classes atualizadas para o padrão layout-* --}}
+    <header class="layout-main-header">
+        <div class="layout-header-container">
+            <a href="{{ route('layout') }}" class="layout-logo-link">
+                <img src="#" alt="Logo" class="layout-logo-image">
+                <span class="layout-logo-text">Loja Crisa</span>
             </a>
 
-            <form action="#" method="GET" class="desktop-search">
-                <input type="text" name="busca" placeholder="Buscar produtos" class="search-input">
-                <button type="submit" class="search-button">
+            <form action="#" method="GET" class="layout-desktop-search">
+                <input type="text" name="busca" placeholder="Buscar produtos" class="layout-search-input">
+                <button type="submit" class="layout-search-button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </form>
 
-            <div class="quick-actions">
-                <a href="#" class="action-link cart-link" title="Carrinho">
+            <div class="layout-quick-actions">
+                <a href="#" class="layout-action-link layout-cart-link" title="Carrinho">
                     <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Carrinho</span>
+
                     @if(session('cart_count', 0) > 0)
-                        <span class="cart-count">
+                        <span class="layout-cart-count">
                             {{ session('cart_count') }}
                         </span>
                     @endif
                 </a>
-                @auth
-                    <a href="#" class="action-link account-link" title="Minha Conta">
+
+                {{-- Lógica correta para visitantes (guest) --}}
+                @guest
+                    <a href="{{ route('login') }}" class="layout-action-link" title="Entrar">
                         <i class="fa-solid fa-user"></i>
-                        <span class="account-text">Minha Conta</span>
+                        <span>Entrar</span>
                     </a>
-                @else
-                    <a href="{{ route('criar') }}" class="action-link">Entrar</a>
+                @endguest
+
+                {{-- Lógica correta para usuários autenticados --}}
+                @auth
+                    <a href="#" class="layout-action-link" title="Minha Conta">
+                        <i class="fa-solid fa-user"></i>
+                        <span>{{ Auth::user()->name }}</span> {{-- Mostra o nome do usuário --}}
+                    </a>
+                    
+                    {{-- O logout deve ser um formulário para segurança --}}
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="layout-action-link" title="Sair">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Sair</span>
+                        </button>
+                    </form>
                 @endauth
             </div>
         </div>

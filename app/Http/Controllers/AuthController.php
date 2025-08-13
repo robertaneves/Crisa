@@ -30,4 +30,9 @@ class AuthController extends Controller
             return back()->withInput()->with("error", "Email ou senha inválido");
         }
     }
+
+    // public function logout(){
+    //     return view('welcome');
+    // }
+
 }

@@ -27,9 +27,11 @@
     .logo-link {
         @apply flex items-center space-x-2;
     }
+
     .logo-image {
         @apply h-10;
     }
+
     .logo-text {
         @apply text-xl font-bold text-gray-800;
     }
@@ -39,14 +41,15 @@
     .desktop-search-form {
         @apply hidden md:flex w-1/2;
     }
+
     .search-input {
-        @apply w-full border border-gray-300 rounded-l-md px-4 py-2
-            focus:ring-violet-500 focus:border-transparent transition;
+        @apply w-full border border-gray-300 rounded-l-md px-4 py-2 focus:ring-violet-500 focus:border-transparent transition;
     }
+
     .search-button {
-        @apply bg-violet-600 text-white px-4 py-2 rounded-r-md
-            hover:bg-violet-700 transition flex items-center;
+        @apply bg-violet-600 text-white px-4 py-2 rounded-r-md hover:bg-violet-700 transition flex items-center;
     }
+
     .search-icon {
         @apply h-5 w-5;
     }
@@ -55,160 +58,281 @@
     .quick-actions {
         @apply flex items-center space-x-4;
     }
+
     .action-link {
         @apply text-gray-600 hover:text-violet-600;
     }
+
     .action-icon {
         @apply h-7 w-7;
     }
+
     .cart-link {
         @apply relative;
     }
+
     .cart-count {
-        @apply absolute -top-2 -right-3 bg-red-500 text-white text-xs
-            rounded-full px-2 py-0.5;
+        @apply absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-2 py-0.5;
     }
 
     /* Conta (Desktop) */
     .account-link-desktop {
         @apply hidden sm:flex items-center;
     }
+
     .account-text {
         @apply ml-2 text-sm font-medium;
     }
 
     /* =========================================================================
-       Formulário de Criação
+       Layout Principal (Cabeçalho, etc.)
     ========================================================================= */
+    .layout-main-header {
+        @apply bg-white shadow-md;
+    }
 
-    .form-page-container {
+    .layout-header-container {
+        @apply container mx-auto px-4 py-3 flex items-center justify-between;
+    }
+
+    .layout-logo-link {
+        @apply flex items-center space-x-2;
+    }
+
+    .layout-logo-image {
+        @apply h-10;
+    }
+
+    .layout-logo-text {
+        @apply text-xl font-bold text-gray-800;
+    }
+
+    .layout-desktop-search {
+        @apply hidden md:flex w-1/2;
+    }
+
+    .layout-search-input {
+        @apply w-full border border-gray-300 rounded-l-md px-4 py-2 focus:ring-violet-500 focus:border-transparent transition;
+    }
+
+    .layout-search-button {
+        @apply bg-violet-600 text-white px-4 py-2 rounded-r-md hover:bg-violet-700 transition flex items-center;
+    }
+
+    .layout-search-icon {
+        @apply h-5 w-5;
+    }
+
+    .layout-quick-actions {
+        @apply flex items-center space-x-4;
+    }
+
+    .layout-action-link {
+        @apply text-gray-600 hover:text-violet-600;
+    }
+
+    .layout-action-icon {
+        @apply h-7 w-7;
+    }
+
+    .layout-cart-link {
+        @apply relative;
+    }
+
+    .layout-cart-count {
+        @apply absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-2 py-0.5;
+    }
+
+    .layout-account-link {
+        @apply hidden sm:flex items-center;
+    }
+
+    .layout-account-text {
+        @apply ml-2 text-sm font-medium;
+    }
+
+    /* =========================================================================
+       Formulário de Cadastro (Register)
+    ========================================================================= */
+    .register-page-container {
         @apply bg-gray-100 py-10;
     }
-    .form-card {
+
+    .register-card {
         @apply max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden;
     }
-    .form-header {
+
+    .register-header {
         @apply bg-gray-50 px-6 py-5 border-b border-gray-200;
     }
-    .form-title {
+
+    .register-title {
         @apply text-xl font-semibold text-gray-800;
     }
-    .form-body {
+
+    .register-body {
         @apply p-6 sm:p-8;
     }
-    .form-grid {
+
+    .register-form {
         @apply space-y-8;
     }
-    .form-section {
+
+    .register-section {
         @apply space-y-6;
     }
-    .section-title {
+
+    .register-section-title {
         @apply text-lg font-semibold text-gray-900 border-b pb-2;
     }
-    .section-grid {
+
+    .register-personal-grid {
+        /* Grid para dados pessoais */
         @apply grid grid-cols-1 md:grid-cols-2 gap-6;
     }
-    .address-grid {
+
+    .register-address-grid {
+        /* Grid específico para endereço */
         @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
     }
-    .form-label {
+
+    .register-label {
         @apply block text-sm font-medium text-gray-700;
     }
-    .label-optional {
+
+    .register-label-optional {
         @apply text-gray-500 font-normal;
     }
-    .form-input {
-        @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md
-            shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500
-            focus:border-indigo-500 sm:text-sm;
+
+    .register-input {
+        @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
     }
-    .form-footer {
+
+    .register-footer {
         @apply flex justify-end pt-4;
     }
-    .btn-primary {
-        @apply inline-flex justify-center py-2 px-6 border border-transparent shadow-sm
-            text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700
-            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+
+    .register-footer-text {
+        /* Classe para o texto "Já possui conta?" */
+        @apply text-sm text-center text-gray-500 mt-6;
+        /* Adicionado margin-top */
+    }
+
+    .register-link {
+        /* Classe para o link de login no rodapé */
+        @apply font-medium text-indigo-600 hover:text-indigo-500;
+    }
+
+    .register-btn-primary {
+        @apply w-full inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
 
     .col-span-full {
         @apply lg:col-span-3;
     }
+
     .col-span-2 {
         @apply lg:col-span-2;
     }
 
+
     /* =========================================================================
-       Formulário de Login 
+       Formulário de Login
     ========================================================================= */
+    .login-body-bg {
+        @apply bg-gray-100 font-sans;
+    }
 
-    .body-bg {
-    @apply bg-gray-100 font-sans;
-}
+    .login-container {
+        @apply flex items-center justify-center min-h-screen;
+    }
 
-/* Containers e Cards */
-.login-container {
+    .login-card {
+        @apply w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg;
+    }
+
+    .login-header {
+        @apply text-center;
+    }
+
+    .login-title {
+        @apply text-3xl font-bold text-gray-800;
+    }
+
+    .login-subtitle {
+        @apply mt-2 text-gray-500;
+    }
+
+    .login-footer-text {
+        @apply text-sm text-center text-gray-500;
+    }
+
+    .login-form {
+        @apply space-y-6;
+    }
+
+    .login-label {
+        @apply block text-sm font-medium text-gray-700;
+    }
+
+    .login-input {
+        @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
+    }
+
+    .login-options {
+        @apply flex items-center justify-between;
+    }
+
+    .login-checkbox {
+        @apply w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500;
+    }
+
+    .login-error {
+        @apply mt-2 text-sm text-red-600;
+    }
+
+    .login-link {
+        @apply font-medium text-indigo-600 hover:text-indigo-500;
+    }
+
+    .login-btn-primary {
+        @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
+
+    /* =========================================================================
+   Formulário de Recuperação de Senha (Forgot)
+========================================================================= */
+.forgot-container {
     @apply flex items-center justify-center min-h-screen;
 }
-
-.login-card {
+.forgot-card {
     @apply w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg;
 }
-
-.card-header {
+.forgot-header {
     @apply text-center;
 }
-
-.card-title {
+.forgot-title {
     @apply text-3xl font-bold text-gray-800;
 }
-
-.card-subtitle {
+.forgot-subtitle {
     @apply mt-2 text-gray-500;
 }
-
-.card-footer {
+.forgot-footer-text {
     @apply text-sm text-center text-gray-500;
 }
-
-/* Formulário e seus elementos */
-.login-form {
+.forgot-form {
     @apply space-y-6;
 }
-
-.form-label {
+.forgot-label {
     @apply block text-sm font-medium text-gray-700;
 }
-
-.form-input {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400;
-    @apply focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
+.forgot-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500;
 }
-
-.form-options {
-    @apply flex items-center justify-between;
-}
-
-.form-checkbox {
-    @apply w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500;
-}
-
-.form-error {
-    @apply mt-2 text-sm text-red-600;
-}
-
-/* Links e Botões */
-.link {
+.forgot-link {
     @apply font-medium text-indigo-600 hover:text-indigo-500;
 }
-
-.btn-primary {
-    @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600;
-    @apply hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
-}
-
-/* Aplicando a fonte Inter ao body, se estiver usando */
-body {
-    font-family: 'Inter', sans-serif;
+.forgot-btn-primary {
+    @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
 }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ClienteRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Stmt\Return_;
 
 class ClienteController extends Controller{
     
@@ -42,6 +43,8 @@ class ClienteController extends Controller{
             return back()->withInput()->with('error', 'Cliente não cadastrado.');
         }
     }
+
+    
 
     // public function clientes(User $user){
     //         return view('cliente.mostrarCliente', ['user'=> $user]); 
