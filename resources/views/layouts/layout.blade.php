@@ -14,7 +14,6 @@
 </head>
 
 <body class="bg-gray-100 font-sans">
-    {{-- Classes atualizadas para o padrão layout-* --}}
     <header class="layout-main-header">
         <div class="layout-header-container">
             <a href="{{ route('layout') }}" class="layout-logo-link">
@@ -41,7 +40,6 @@
                     @endif
                 </a>
 
-                {{-- Lógica correta para visitantes (guest) --}}
                 @guest
                     <a href="{{ route('login') }}" class="layout-action-link" title="Entrar">
                         <i class="fa-solid fa-user"></i>
@@ -49,14 +47,12 @@
                     </a>
                 @endguest
 
-                {{-- Lógica correta para usuários autenticados --}}
                 @auth
-                    <a href="#" class="layout-action-link" title="Minha Conta">
+                    <a href="{{ route('mostrar.cliente') }}" class="layout-action-link" title="Minha Conta">
                         <i class="fa-solid fa-user"></i>
-                        <span>{{ Auth::user()->name }}</span> {{-- Mostra o nome do usuário --}}
+                        <span>{{ Auth::user()->name }}</span> 
                     </a>
                     
-                    {{-- O logout deve ser um formulário para segurança --}}
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <button type="submit" class="layout-action-link" title="Sair">

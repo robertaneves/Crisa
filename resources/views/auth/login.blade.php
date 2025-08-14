@@ -12,7 +12,7 @@
                 <p class="login-subtitle">Bem-vindo de volta! Por favor, insira seus dados.</p>
             </div>
 
-            <form method="POST" action="{{ route('login.proccess') }}" class="login-form">
+            <form method="POST" action="{{ route('login.proccesso') }}" class="login-form">
                 @csrf
 
                 <div>

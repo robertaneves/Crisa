@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reset_senha', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
         });
     }
 

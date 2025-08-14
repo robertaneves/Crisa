@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AuthRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -13,7 +12,7 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function loginProccess(AuthRequest $request)
+    public function loginProccesso(AuthRequest $request)
     {
         try {
             $autorizado = Auth::attempt([
@@ -24,15 +23,20 @@ class AuthController extends Controller
             if (!$autorizado) {
                 return back()->withInput()->with('error', 'Email ou senha inválido.');
             }
-            // return redirect()->route('cliente.mostrarCliente')->withInput()->with('success', 'Cliente cadastrado com sucesso.');
-            
+        return redirect()->route('mostrar.cliente')->with("success", "Logado com sucesso");
+
         } catch (\Exception $e) {
             return back()->withInput()->with("error", "Email ou senha inválido");
         }
     }
 
-    // public function logout(){
-    //     return view('welcome');
-    // }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route("login")->with("success", "Deslogado com sucesso");
+    }
 
+    public function mostrarCliente(){
+        return view('cliente.mostrarCliente');
+    }
 }

@@ -50,6 +50,8 @@ class ClienteController extends Controller{
     //         return view('cliente.mostrarCliente', ['user'=> $user]); 
        
     // }
+
+   
     
 
 }
