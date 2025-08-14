@@ -4,6 +4,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
+        "start": "node server.js",
         "dev": "vite"
     },
     "devDependencies": {
@@ -20,4 +21,5 @@
         "imask": "^7.6.1",
         "sweetalert2": "^11.22.3"
     }
+
 }
