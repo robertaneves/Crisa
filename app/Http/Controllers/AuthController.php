@@ -37,6 +37,6 @@ class AuthController extends Controller
     }
 
     public function mostrarCliente(){
-        return view('cliente.mostrarCliente');
+        return view('auth.mostrarCliente');
     }
 }

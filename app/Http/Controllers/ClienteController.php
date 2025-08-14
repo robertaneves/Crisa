@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ClienteRequest;
 use App\Models\User;
+use Illuminate\Http\Client\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Stmt\Return_;
 
@@ -37,20 +39,22 @@ class ClienteController extends Controller{
                 'cidade' => $request->cidade,
                 'estado' => $request->estado
             ]);
-            return redirect()->route('login')->withInput()->with('success', 'Cliente cadastrado com sucesso.');
+            return redirect()->route('login')->withInput()->with('success', 'Cliente cadastrado com sucesso');
         } catch (\Exception $e) {
             DB::rollBack();
-            return back()->withInput()->with('error', 'Cliente não cadastrado.');
+            return back()->withInput()->with('error', 'Cliente já cadastrado');
         }
     }
 
     
 
-    // public function clientes(User $user){
-    //         return view('cliente.mostrarCliente', ['user'=> $user]); 
-       
-    // }
+    public function dadosCliente(){
+    return view('cliente.dadosCliente');
+    }
 
+    public function infoCliente(){
+        
+    }
    
     
 
