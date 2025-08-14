@@ -18,8 +18,8 @@
         "vite": "^7.0.4"
     },
     "dependencies": {
+        "express": "^5.1.0",
         "imask": "^7.6.1",
         "sweetalert2": "^11.22.3"
     }
-
 }
