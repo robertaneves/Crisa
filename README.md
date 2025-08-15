@@ -1,61 +1,120 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛍️ Loja Crisa - E-commerce de Moda Feminina
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Logo da Loja Crisa](https://storage.googleapis.com/gemini-prod-us-east1-9d95f2df5364/images/f3693e50-2f95-4674-9c44-e2a22026850c.png)
 
-## About Laravel
+Este repositório contém o código-fonte do projeto de e-commerce da Loja Crisa, uma plataforma completa para a venda de roupas e acessórios femininos, construída com tecnologias modernas e robustas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Sobre o Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+A Loja Crisa é um projeto de e-commerce full-stack que visa oferecer uma experiência de compra online fluida e segura. A plataforma foi desenvolvida utilizando o framework **Laravel** para o back-end e **Node.js** para tarefas assíncronas, com um front-end moderno e responsivo construído com **Tailwind CSS** e **Alpine.js**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+O foco do projeto é criar um sistema completo, desde a autenticação do usuário até a gestão de seu perfil e, futuramente, o gerenciamento de produtos, carrinho de compras e finalização de pedidos.
 
-## Learning Laravel
+## 🚀 Tecnologias Utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Back-end:**
+  - [Laravel](https://laravel.com/) (PHP)
+  - [Node.js](https://nodejs.org/) (para compilação de assets com Vite)
+- **Front-end:**
+  - [Tailwind CSS](https://tailwindcss.com/)
+  - [Alpine.js](https://alpinejs.dev/)
+  - Blade Templates
+- **Banco de Dados:**
+  - MySQL (ou outro de sua preferência, como PostgreSQL)
+- **Ferramentas:**
+  - [Vite](https://vitejs.dev/)
+  - [Composer](https://getcomposer.org/)
+  - [NPM](https://www.npmjs.com/)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## ✅ Funcionalidades Implementadas
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Atualmente, o projeto conta com as seguintes funcionalidades:
 
-## Laravel Sponsors
+- **Autenticação de Usuário Completa:**
+  - **Cadastro de Clientes:** Formulário completo com validação de dados.
+  - **Login e Logout:** Sistema de sessão seguro.
+  - **Recuperação de Senha:** Fluxo de "Esqueci minha senha" com envio de link por e-mail.
+- **Painel do Cliente ("Minha Conta"):**
+  - **Visualização de Dados Pessoais:** Página que exibe as informações do usuário.
+  - **Edição de Dados Pessoais:** Interface interativa (com modo de visualização e edição) para o cliente atualizar suas informações.
+  - **Gerenciamento de Endereço:** Seção dedicada para o cliente visualizar e atualizar seu endereço de entrega.
+- **Páginas Institucionais:**
+  - Página "Sobre Nós" com a história da marca.
+  - Estrutura para "Política de Privacidade" e "Termos de Uso".
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ⚙️ Instalação e Configuração
 
-### Premium Partners
+Siga os passos abaixo para configurar o ambiente de desenvolvimento localmente.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+**Pré-requisitos:** PHP, Composer, Node.js, NPM e um servidor de banco de dados (ex: MySQL).
 
-## Contributing
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/loja-crisa.git](https://github.com/seu-usuario/loja-crisa.git)
+    cd loja-crisa
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2.  **Instale as dependências do PHP:**
+    ```bash
+    composer install
+    ```
 
-## Code of Conduct
+3.  **Instale as dependências do Node.js:**
+    ```bash
+    npm install
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4.  **Configure o ambiente:**
+    - Copie o arquivo de exemplo `.env.example` para `.env`.
+      ```bash
+      cp .env.example .env
+      ```
+    - Gere uma chave de aplicação para o Laravel.
+      ```bash
+      php artisan key:generate
+      ```
+    - Configure as credenciais do seu banco de dados no arquivo `.env`.
+      ```
+      DB_CONNECTION=mysql
+      DB_HOST=127.0.0.1
+      DB_PORT=3306
+      DB_DATABASE=loja_crisa
+      DB_USERNAME=root
+      DB_PASSWORD=
+      ```
 
-## Security Vulnerabilities
+5.  **Execute as migrações do banco de dados:**
+    ```bash
+    php artisan migrate
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6.  **Compile os assets e inicie o servidor de desenvolvimento:**
+    - Em um terminal, rode o Vite para compilar o front-end em tempo real.
+      ```bash
+      npm run dev
+      ```
+    - Em outro terminal, inicie o servidor do Laravel.
+      ```bash
+      php artisan serve
+      ```
 
-## License
+7.  **Acesse a aplicação:**
+    Abra seu navegador e acesse [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🔮 Próximos Passos (Roadmap)
+
+- [ ] Catálogo de Produtos (listagem, filtros e página de detalhes).
+- [ ] Carrinho de Compras.
+- [ ] Processo de Checkout e Integração com Gateway de Pagamento.
+- [ ] Histórico de Pedidos no painel do cliente.
+- [ ] Painel Administrativo para gerenciamento de produtos e pedidos.
+
+## ✍️ Autor
+
+**[Seu Nome Completo]**
+
+- GitHub: `[@seu-usuario](https://github.com/seu-usuario)`
+- LinkedIn: `[Seu Nome](https://www.linkedin.com/in/seu-perfil)`
+
+---
+*Este projeto foi desenvolvido como parte de [descreva o contexto, ex: um projeto pessoal, estudo, etc.].*
