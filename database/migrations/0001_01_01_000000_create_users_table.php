@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('telefone');
             $table->string('cpf')->unique();
+            $table->enum('genero', ['Masculino', 'Feminino', 'Outro'])->default('Outro');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

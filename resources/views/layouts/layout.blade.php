@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
     {{-- ✅ IMPORTAÇÃO DO VITE (CSS e JS) --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -78,19 +82,8 @@
                     <ul class="footer-link-list">
                         <li><a href="{{ route('sobre.nos') }}" class="footer-link">Sobre a Loja Crisa</a></li>
                         <li><a href="#" class="footer-link">Nossas Lojas</a></li>
-                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
-                        <li><a href="#" class="footer-link">Termos de Uso</a></li>
-                    </ul>
-                </div>
-
-                <!-- Coluna: Ajuda e Suporte -->
-                <div class="footer-column">
-                    <h3 class="footer-column-title">Ajuda e Suporte</h3>
-                    <ul class="footer-link-list">
-                        <li><a href="#" class="footer-link">Trocas e Devoluções</a></li>
-                        <li><a href="#" class="footer-link">Dúvidas Frequentes</a></li>
-                        <li><a href="#" class="footer-link">Como Comprar</a></li>
-                        <li><a href="#" class="footer-link">Fale Conosco</a></li>
+                        {{-- <li><a href="#" class="footer-link">Política de Privacidade</a></li>
+                        <li><a href="#" class="footer-link">Termos de Uso</a></li> --}}
                     </ul>
                 </div>
 
@@ -100,11 +93,11 @@
                     <ul class="footer-link-list">
                         <li class="footer-contact-item">
                             <i class="fa-solid fa-phone footer-contact-icon"></i>
-                            <span>(XX) XXXX-XXXX</span>
+                            <span>(71) 99936-5757</span>
                         </li>
                         <li class="footer-contact-item">
                             <i class="fa-solid fa-envelope footer-contact-icon"></i>
-                            <span>contato@lojacrisa.com.br</span>
+                            <span>lojacrisa@hotmail.com</span>
                         </li>
                         <li class="footer-contact-item">
                             <i class="fa-solid fa-clock footer-contact-icon"></i>
@@ -134,7 +127,7 @@
                     &copy; {{ date('Y') }} Loja Crisa. Todos os direitos reservados.
                 </p>
                 <div class="footer-social-icons">
-                    <a href="#" class="footer-social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/lojacrisamf?igsh=bTdpMmk4b2pyMjN3" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="footer-social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="footer-social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>

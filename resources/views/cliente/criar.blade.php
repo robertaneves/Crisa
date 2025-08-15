@@ -19,26 +19,43 @@
                                 <input type="text" class="register-input" name="name" id="name"
                                     placeholder="Digite seu nome completo" value="{{ old('name') }}">
                             </div>
+
                             <div>
                                 <label for="email" class="register-label">Email:</label>
                                 <input type="email" class="register-input" name="email" id="email"
                                     placeholder="Digite seu email">
                             </div>
+
                             <div>
                                 <label for="telefone" class="register-label">Telefone:</label>
                                 <input type="text" class="register-input" name="telefone" id="telefone"
                                     placeholder="(00) 00000-0000" maxlength="15">
                             </div>
+
                             <div>
                                 <label for="cpf" class="register-label">CPF:</label>
                                 <input type="text" class="register-input" name="cpf" id="cpf" placeholder="000.000.000-00"
                                     maxlength="14">
                             </div>
+
                             <div>
                                 <label for="password" class="register-label">Senha:</label>
                                 <input type="password" class="register-input" name="password" id="password"
-                                    placeholder="Crie uma senha forte">
+                                placeholder="Crie uma senha forte">
                             </div>
+
+                            <div class="form-group">
+                                <label for="genero" class="register-label">Gênero</label>
+                                <select name="genero" id="genero" class="select-genero" required>
+                                    <option value="">Selecione</option>
+                                    @foreach($genero as $generos)
+                                        <option value="{{ $generos }}" {{ old('genero') == $generos ? 'selected' : '' }}>
+                                            {{ ucfirst($generos) }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div>
                                 <label for="password_confirmation" class="register-label">Repita sua senha:</label>
                                 <input type="password" class="register-input" name="password_confirmation"
@@ -54,31 +71,37 @@
                                 <label for="rua" class="register-label">Rua:</label>
                                 <input type="text" class="register-input" name="rua" id="rua" placeholder="Digite sua rua">
                             </div>
+
                             <div>
                                 <label for="numero" class="register-label">Número:</label>
                                 <input type="text" class="register-input" name="numero" id="numero" placeholder="Nº">
                             </div>
+
                             <div class="col-span-full">
                                 <label for="complemento" class="register-label">Complemento: <span
                                         class="register-label-optional">(Opcional)</span></label>
                                 <input type="text" class="register-input" name="complemento" id="complemento"
                                     placeholder="Apto, Bloco, etc.">
                             </div>
+
                             <div>
                                 <label for="bairro" class="register-label">Bairro:</label>
                                 <input type="text" class="register-input" name="bairro" id="bairro"
                                     placeholder="Digite seu bairro">
                             </div>
+
                             <div>
                                 <label for="cidade" class="register-label">Cidade:</label>
                                 <input type="text" class="register-input" name="cidade" id="cidade"
                                     placeholder="Digite sua cidade">
                             </div>
+
                             <div>
                                 <label for="estado" class="register-label">Estado:</label>
                                 <input type="text" class="register-input" name="estado" id="estado" placeholder="UF"
                                     maxlength="2">
                             </div>
+                            
                             <div class="col-span-full">
                                 <label for="cep" class="register-label">CEP:</label>
                                 <input type="text" class="register-input" name="cep" id="cep" placeholder="00000-000"

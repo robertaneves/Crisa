@@ -1,8 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-{{-- Inclua o link para os ícones no seu layout principal ou aqui, se ainda não tiver --}}
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
 
 <div class="account-container">
     
@@ -30,7 +28,7 @@
         </a>
 
         {{-- Card: Meus Endereços --}}
-        <a href="" class="account-card">
+        <a href="{{ route('dados.endereco') }}" class="account-card">
             <i class="ph-map-pin account-card-icon"></i>
             <h5 class="account-card-title">Meus Endereços</h5>
             <p class="account-card-description">Gerencie seus endereços para agilizar futuras compras</p>

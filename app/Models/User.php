@@ -21,7 +21,8 @@ class User extends Authenticatable{
         'email',
         'telefone',
         'cpf',
-        'password',
+        'genero',
+        'password'
     ];
 
     /**
@@ -52,6 +53,5 @@ class User extends Authenticatable{
         return $this->hasOne(Endereco::class);
     }
 
-    
     
 }

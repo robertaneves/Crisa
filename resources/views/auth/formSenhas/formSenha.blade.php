@@ -16,6 +16,8 @@
                                placeholder="seu.email@exemplo.com" value="{{ old('email') }}">
                     </div>
                 </div>
+            </form>
+            <form action="{{ route('link.email') }}" method="post">
                 <div>
                     <button type="submit" class="forgot-btn-primary">Recuperar</button>
                 </div>

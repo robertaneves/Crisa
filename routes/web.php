@@ -7,6 +7,10 @@ use App\Http\Controllers\sobreNosController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ClienteController::class, 'layout'])->name('layout');
+Route::get('/sobreNos', [sobreNosController::class, 'sobreNos'])->name('sobre.nos');
+
+Route::get('/linkEmail', [senhaController::class, 'linkEmail'])->name('link.email');
+Route::post('/linkEmail', [senhaController::class, 'linkEnviarEmail']);
 
 // CRIAÇÃO DE CLIENTE
 Route::get('/criar', [ClienteController::class, 'criar'])->name('criar');
@@ -28,6 +32,7 @@ Route::post('/linkSenha', [SenhaController::class, 'linkProcesso'])->name('link.
 
 // INFORMAÇÕES DO CLIENTE (DADOS, PEDIDOS, ENDEREÇOS, CARTEIRA, HISTÓRICO E ALTERAR SENHA)
 Route::get('/dadosClientes', [ClienteController::class, 'dadosCliente'])->name('dados.cliente');
-Route::post('/dadosClientes', [ClienteController::class, 'infoCliente'])->name('info.cliente');
+Route::put('/dadosClientes', [ClienteController::class, 'infoCliente'])->name('info.cliente');
 
-Route::get('/sobreNos', [sobreNosController::class, 'sobreNos'])->name('sobre.nos');
+Route::get('/enderecoClientes', [ClienteController::class, 'dadosEndereco'])->name('dados.endereco');
+Route::put('/enderecoClientes', [ClienteController::class, 'infoEndereco'])->name('info.endereco');
