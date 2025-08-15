@@ -1,7 +1,5 @@
 # 🛍️ Loja Crisa - E-commerce de Moda Feminina
 
-![Logo da Loja Crisa](https://storage.googleapis.com/gemini-prod-us-east1-9d95f2df5364/images/f3693e50-2f95-4674-9c44-e2a22026850c.png)
-
 Este repositório contém o código-fonte do projeto de e-commerce da Loja Crisa, uma plataforma completa para a venda de roupas e acessórios femininos, construída com tecnologias modernas e robustas.
 
 ## ✨ Sobre o Projeto
