@@ -96,9 +96,6 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento localmente.
       php artisan serve
       ```
 
-7.  **Acesse a aplicação:**
-    Abra seu navegador e acesse [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
 ## 🔮 Próximos Passos (Roadmap)
 
 - [ ] Catálogo de Produtos (listagem, filtros e página de detalhes).
@@ -109,10 +106,10 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento localmente.
 
 ## ✍️ Autor
 
-**[Seu Nome Completo]**
+**[Roberta Neves]**
 
-- GitHub: `[@seu-usuario](https://github.com/seu-usuario)`
-- LinkedIn: `[Seu Nome](https://www.linkedin.com/in/seu-perfil)`
+- GitHub: `https://github.com/robertaneves`
+- LinkedIn: ``
 
 ---
-*Este projeto foi desenvolvido como parte de [descreva o contexto, ex: um projeto pessoal, estudo, etc.].*
+*Este projeto foi desenvolvido como parte de um projeto pessoal, estudo.*
