@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\SenhaController;
 use App\Http\Controllers\sobreNosController;
+use App\Models\Produto;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ClienteController::class, 'layout'])->name('layout');
@@ -36,3 +38,9 @@ Route::put('/dadosClientes', [ClienteController::class, 'infoCliente'])->name('i
 
 Route::get('/enderecoClientes', [ClienteController::class, 'dadosEndereco'])->name('dados.endereco');
 Route::put('/enderecoClientes', [ClienteController::class, 'infoEndereco'])->name('info.endereco');
+
+Route::get('/carrinho', [CarrinhoController::class, 'indexCarrinho'])->name('index.carrinho');
+Route::post('/carrinho/adicionar/{produto}', [CarrinhoController::class, 'addCarrinho'])->name('add.carrinho');
+Route::patch('/carrinho/atualizar/{produto}', [CarrinhoController::class, 'atualizarCarrinho'])->name('atualizar.carrinho');
+Route::delete('/carrinho/atualizar/{produto}', [CarrinhoController::class, 'deleteCarrinho'])->name('delete.carrinho');
+

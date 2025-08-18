@@ -3,6 +3,7 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
+
 @source '../**/*.js';
 
 @theme {
@@ -240,6 +241,10 @@
         @apply lg:col-span-2;
     }
 
+    .register-btn-primary {
+        @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
+
 
     /* =========================================================================
        Formulário de Login
@@ -303,6 +308,7 @@
     .login-btn-primary {
         @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
+    
 
     /* =========================================================================
    Formulário de Recuperação de Senha (Forgot)
@@ -404,10 +410,6 @@
     .account-card-description {
         @apply font-normal text-gray-600;
     }
-
-    /* resources/css/app.css */
-
-
 
 
     /* Estilos do Rodapé (Footer) */
@@ -626,5 +628,197 @@
     @apply pt-4;
 }
 
+/* =========================================================================
+   Página do Carrinho de Compras (Versão Refinada)
+========================================================================= */
+
+.cart-page {
+    @apply bg-gray-50 font-sans;
+}
+
+.cart-container {
+    @apply container mx-auto px-4 py-8 md:py-16;
+}
+
+/* Cabeçalho */
+.cart-header {
+    @apply flex items-baseline justify-between border-b border-gray-200 pb-4 mb-8;
+}
+
+.cart-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-900;
+}
+
+.cart-continue-link {
+    @apply text-sm font-medium text-indigo-600 hover:text-indigo-500 transition-colors;
+}
+
+/* Alertas */
+.alert-success {
+    @apply bg-green-100 text-green-800 p-4 rounded-lg mb-6 text-center;
+}
+
+/* Grid Principal */
+.cart-grid {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12;
+}
+
+/* Lista de Itens */
+.cart-items-list {
+    @apply lg:col-span-2 space-y-6;
+}
+
+.cart-item {
+    @apply bg-white rounded-xl shadow-sm p-4 flex flex-wrap md:flex-nowrap gap-4 transition-shadow hover:shadow-md;
+}
+
+.cart-item-image {
+    @apply w-24 h-24 md:w-28 md:h-28 flex-shrink-0;
+}
+.cart-item-image img {
+    @apply w-full h-full object-cover rounded-lg;
+}
+
+.cart-item-details {
+    @apply flex-grow;
+}
+
+.cart-item-name {
+    @apply text-lg font-semibold text-gray-800;
+}
+
+.cart-item-price {
+    @apply text-gray-600 mt-1;
+}
+
+.cart-quantity-form {
+    @apply mt-3 flex items-center gap-2;
+}
+
+.cart-quantity-input {
+    @apply w-20 text-center border-gray-300 rounded-md shadow-sm py-1.5 focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+.cart-update-button {
+    @apply text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors;
+}
+
+.cart-item-actions {
+    @apply w-full md:w-auto flex md:flex-col items-center md:items-end justify-between mt-4 md:mt-0;
+}
+
+.cart-item-subtotal {
+    @apply text-lg font-bold text-gray-900;
+}
+
+.cart-remove-button {
+    @apply text-gray-400 hover:text-red-600 transition-colors p-2;
+}
+
+/* Resumo do Pedido */
+.cart-summary {
+    @apply lg:col-span-1 bg-white rounded-xl shadow-sm p-6 h-fit;
+}
+
+.cart-summary-title {
+    @apply text-xl font-bold text-gray-900 border-b border-gray-200 pb-4;
+}
+
+.cart-summary-row, .cart-summary-total {
+    @apply flex justify-between items-center py-4;
+}
+.cart-summary-row {
+    @apply text-gray-600;
+}
+
+.cart-summary-total {
+    @apply text-xl font-bold text-gray-900 border-t border-gray-200;
+}
+
+.cart-checkout-button {
+    @apply mt-4 w-full block text-center bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105;
+}
+
+/* Estado de Carrinho Vazio */
+.cart-empty {
+    @apply text-center bg-white rounded-xl shadow-sm p-12 md:p-20;
+}
+
+.cart-empty-icon {
+    @apply text-7xl text-gray-300;
+}
+
+.cart-empty-title {
+    @apply mt-6 text-2xl font-bold text-gray-800;
+}
+
+.cart-empty-text {
+    @apply mt-2 text-gray-500;
+}
+
+.cart-empty-button {
+    @apply mt-8 inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105;
+}
+
+
+ /* =========================================================================
+       Layout (PRODUTOS)
+    ========================================================================= */
+
+/* Container de boas-vindas */
+.produtos-container {
+    @apply p-8 text-center;
+}
+
+.titulo-principal {
+    @apply text-3xl font-bold text-gray-800;
+}
+
+.subtitulo {
+    @apply text-gray-600;
+}
+
+/* Título da seção de produtos */
+.titulo-secao {
+    @apply text-xl text-center font-semibold my-4;
+}
+
+/* Lista de produtos */
+.lista-produtos {
+    @apply flex flex-wrap gap-5 px-8 justify-start;
+}
+
+/* Card de cada produto */
+.produto-card {
+    @apply border border-gray-300 p-4 rounded-lg w-64 bg-white transition-transform duration-200 ease-in-out shadow-sm;
+}
+
+.produto-card:hover {
+    @apply -translate-y-1 shadow-lg;
+}
+
+/* Nome do produto */
+.produto-nome {
+    @apply text-lg font-semibold mt-0;
+}
+
+/* Preço */
+.produto-preco {
+    @apply text-gray-900 font-bold my-2;
+}
+
+/* Descrição */
+.produto-descricao {
+    @apply text-sm text-gray-700 mb-4;
+}
+
+/* Botão adicionar */
+.btn-adicionar {
+    @apply bg-purple-700 text-white px-4 py-2 rounded-md cursor-pointer transition-colors duration-200;
+}
+
+.btn-adicionar:hover {
+    @apply bg-purple-800;
+}
 
 }

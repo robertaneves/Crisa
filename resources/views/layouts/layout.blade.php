@@ -32,7 +32,7 @@
             </form>
 
             <div class="layout-quick-actions">
-                <a href="#" class="layout-action-link layout-cart-link" title="Carrinho">
+                <a href="{{ route('index.carrinho') }}" class="layout-action-link layout-cart-link" title="Carrinho">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span>Carrinho</span>
 
