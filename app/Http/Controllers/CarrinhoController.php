@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CarrinhoController extends Controller{
     public function indexCarrinho(){
         $carrinho = session()->get('carrinho', []);
-        return view('cliente.carrinho', compact('carrinho'));
+        return view('produto.carrinho', compact('carrinho'));
     }
 
     public function addCarrinho(Request $request, Produto $produto){

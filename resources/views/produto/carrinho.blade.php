@@ -71,7 +71,7 @@
                         <span>Total</span>
                         <span>R$ {{ number_format($total, 2, ',', '.') }}</span>
                     </div>
-                    <a href="#" class="cart-checkout-button">Finalizar Compra</a>
+                    <a href="{{ route('index.checkout') }}" class="cart-checkout-button">Finalizar Compra</a>
                 </aside>
             </div>
 
