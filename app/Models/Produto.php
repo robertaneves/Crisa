@@ -49,7 +49,6 @@ class Produto extends Model
     public function categorias(): BelongsToMany
     {
         return $this->belongsToMany(Categoria::class, 'categoria_de_produtos');
-        // O segundo argumento 'categoria_de_produtos' é o nome da sua tabela pivot (intermediária)
     }
 
     /**

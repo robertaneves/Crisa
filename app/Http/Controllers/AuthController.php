@@ -23,8 +23,11 @@ class AuthController extends Controller
             if (!$autorizado) {
                 return back()->withInput()->with('error', 'Email ou senha inválido.');
             }
-        return redirect()->route('mostrar.cliente')->with("success", "Logado com sucesso");
 
+            if (Auth::user()->is_admin) {
+                return redirect()->route('admin.index')->with("success", "Logado com sucesso");
+            }
+            return redirect()->route('layout')->with("success", "Logado com sucesso");
         } catch (\Exception $e) {
             return back()->withInput()->with("error", "Email ou senha inválido");
         }
@@ -36,7 +39,8 @@ class AuthController extends Controller
         return redirect()->route("login")->with("success", "Deslogado com sucesso");
     }
 
-    public function mostrarCliente(){
+    public function mostrarCliente()
+    {
         return view('auth.mostrarCliente');
     }
 }

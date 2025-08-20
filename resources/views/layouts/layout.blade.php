@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,10 +50,19 @@
                 @endguest
 
                 @auth
-                    <a href="{{ route('mostrar.cliente') }}" class="layout-action-link" title="Minha Conta">
-                        <i class="fa-solid fa-user"></i>
-                        <span>{{ Auth::user()->name }}</span>
-                    </a>
+                    {{-- Verifica se o utilizador logado é um administrador --}}
+                    @if (Auth::user()->is_admin)
+                        <a href="{{ route('admin.index') }}" class="layout-action-link" title="Minha Conta">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <span>Admin</span>
+                        </a>
+                    @else
+                        {{-- Se for um cliente normal, mostra o link para a conta do cliente --}}
+                        <a href="{{ route('mostrar.cliente') }}" class="layout-action-link" title="Minha Conta">
+                            <i class="fa-solid fa-user"></i>
+                            <span>{{ Auth::user()->name }}</span>
+                        </a>
+                    @endif
 
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
@@ -127,7 +135,9 @@
                     &copy; {{ date('Y') }} Loja Crisa. Todos os direitos reservados.
                 </p>
                 <div class="footer-social-icons">
-                    <a href="https://www.instagram.com/lojacrisamf?igsh=bTdpMmk4b2pyMjN3" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/lojacrisamf?igsh=bTdpMmk4b2pyMjN3" target="_blank"
+                        rel="noopener noreferrer" class="footer-social-link" title="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="footer-social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#" class="footer-social-link" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>

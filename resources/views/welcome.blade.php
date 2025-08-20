@@ -7,7 +7,7 @@
         <p class="subtitulo">Aqui você encontra os melhores produtos.</p>
     </div>
 
-    <h1 class="titulo-secao">Nossos Produtos</h1>
+    {{-- <h1 class="titulo-secao">Nossos Produtos</h1> --}}
     <div class="lista-produtos">
         {{-- Loop para percorrer cada produto enviado pelo controller --}}
         @foreach($produtos as $produto)

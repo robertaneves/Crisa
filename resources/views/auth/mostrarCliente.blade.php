@@ -49,7 +49,7 @@
         </a>
 
         {{-- Card: Alterar Senha --}}
-        <a href="{{-- sua-rota-aqui --}}" class="account-card">
+        <a href="{{ route('alterar.index') }}" class="account-card">
             <i class="ph-lock-key account-card-icon"></i>
             <h5 class="account-card-title">Alterar Senha</h5>
             <p class="account-card-description">Mantenha sua conta segura alterando sua senha regularmente.</p>

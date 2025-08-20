@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ClienteRequest;
 use App\Http\Requests\UpdateRequest;
+use App\Models\Categoria;
 use App\Models\Produto;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -15,7 +16,8 @@ class ClienteController extends Controller
 
     public function layout(){
         $produtos = Produto::where('ativo', true)->get();
-        return view('welcome', compact('produtos'));
+        $categorias = Categoria::all();
+        return view('welcome', compact('produtos', 'categorias'));
     }
 
     public function criar()

@@ -206,7 +206,7 @@
     }
 
     select {
-        @apply mt-1 block w-full px-3 py-2  text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+        @apply mt-1 block w-full px-3 py-2 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
     }
 
     .register-label-optional {
@@ -232,7 +232,7 @@
         @apply font-medium text-indigo-600 hover:text-indigo-500;
     }
 
-  
+
     .col-span-full {
         @apply lg:col-span-3;
     }
@@ -308,7 +308,7 @@
     .login-btn-primary {
         @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
     }
-    
+
 
     /* =========================================================================
    Formulário de Recuperação de Senha (Forgot)
@@ -512,314 +512,318 @@
         @apply mt-6 text-gray-600 text-base leading-relaxed space-y-4;
     }
 
-/* =========================================================================
+    /* =========================================================================
    Página "Meus Dados" (Visualização e Edição)
 ========================================================================= */
 
-.dados-page-container {
-    @apply container mx-auto p-4 md:p-8;
-}
+    .dados-page-container {
+        @apply container mx-auto p-4 md:p-8;
+    }
 
-/* Cabeçalho */
-.dados-header {
-    @apply mb-8 flex flex-col md:flex-row items-start md:items-center justify-between;
-}
+    /* Cabeçalho */
+    .dados-header {
+        @apply mb-8 flex flex-col md:flex-row items-start md:items-center justify-between;
+    }
 
-.dados-header-content {
-    @apply flex-1; /* Garante que o texto ocupe o espaço necessário */
-}
+    .dados-header-content {
+        @apply flex-1;
+        /* Garante que o texto ocupe o espaço necessário */
+    }
 
-.dados-title {
-    @apply text-3xl font-bold text-gray-800;
-}
+    .dados-title {
+        @apply text-3xl font-bold text-gray-800;
+    }
 
-.dados-subtitle {
-    @apply text-gray-500 mt-1;
-}
+    .dados-subtitle {
+        @apply text-gray-500 mt-1;
+    }
 
-.dados-edit-btn {
-    /* Estilo do botão de editar atualizado para a cor roxa */
-    @apply inline-flex justify-center py-2 px-6 mt-4 md:mt-0 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500;
-}
+    .dados-edit-btn {
+        /* Estilo do botão de editar atualizado para a cor roxa */
+        @apply inline-flex justify-center py-2 px-6 mt-4 md:mt-0 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500;
+    }
 
-/* Card de Visualização */
-.dados-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden p-6 md:p-8 space-y-6;
-}
+    /* Card de Visualização */
+    .dados-card {
+        @apply bg-white rounded-lg shadow-md overflow-hidden p-6 md:p-8 space-y-6;
+    }
 
-.dados-card-title {
-    @apply text-xl font-semibold text-gray-700 border-b pb-3;
-}
+    .dados-card-title {
+        @apply text-xl font-semibold text-gray-700 border-b pb-3;
+    }
 
-.dados-info-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4;
-}
+    .dados-info-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4;
+    }
 
-.dados-info-item {
-    @apply flex flex-col;
-}
+    .dados-info-item {
+        @apply flex flex-col;
+    }
 
-.dados-info-label {
-    @apply text-sm font-medium text-gray-500;
-}
+    .dados-info-label {
+        @apply text-sm font-medium text-gray-500;
+    }
 
-.dados-info-value {
-    @apply mt-1 text-base text-gray-800 font-semibold;
-}
+    .dados-info-value {
+        @apply mt-1 text-base text-gray-800 font-semibold;
+    }
 
-/* Formulário de Edição */
-.dados-card-form {
-    @apply bg-white rounded-lg shadow-md overflow-hidden;
-}
+    /* Formulário de Edição */
+    .dados-card-form {
+        @apply bg-white rounded-lg shadow-md overflow-hidden;
+    }
 
-.dados-form-body {
-    @apply p-6 md:p-8 space-y-8;
-}
+    .dados-form-body {
+        @apply p-6 md:p-8 space-y-8;
+    }
 
-.dados-form-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
-}
+    .dados-form-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+    }
 
-.dados-form-footer {
-    @apply bg-gray-50 px-6 py-4 flex justify-end items-center gap-4;
-}
+    .dados-form-footer {
+        @apply bg-gray-50 px-6 py-4 flex justify-end items-center gap-4;
+    }
 
-.dados-cancel-btn {
-    @apply text-sm font-medium text-gray-600 hover:text-gray-800;
-}
+    .dados-cancel-btn {
+        @apply text-sm font-medium text-gray-600 hover:text-gray-800;
+    }
 
-/* =========================================================================
+    /* =========================================================================
    Página de Confirmação de Reset de Senha
 ========================================================================= */
 
-.password-reset-container {
-    @apply bg-gray-100 flex items-center justify-center min-h-screen px-4;
-}
+    .password-reset-container {
+        @apply bg-gray-100 flex items-center justify-center min-h-screen px-4;
+    }
 
-.password-reset-card {
-    @apply w-full max-w-md p-8 space-y-4 bg-white rounded-xl shadow-lg text-center;
-}
+    .password-reset-card {
+        @apply w-full max-w-md p-8 space-y-4 bg-white rounded-xl shadow-lg text-center;
+    }
 
-.password-reset-icon-wrapper {
-    @apply mx-auto w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full;
-}
+    .password-reset-icon-wrapper {
+        @apply mx-auto w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full;
+    }
 
-.password-reset-icon-wrapper i {
-    @apply text-3xl text-purple-600;
-}
+    .password-reset-icon-wrapper i {
+        @apply text-3xl text-purple-600;
+    }
 
-.password-reset-title {
-    @apply text-3xl font-bold text-gray-800;
-}
+    .password-reset-title {
+        @apply text-3xl font-bold text-gray-800;
+    }
 
-.password-reset-message {
-    @apply text-gray-600;
-}
+    .password-reset-message {
+        @apply text-gray-600;
+    }
 
-.password-reset-spam-note {
-    @apply text-sm text-gray-500;
-}
+    .password-reset-spam-note {
+        @apply text-sm text-gray-500;
+    }
 
-.password-reset-link {
-    @apply font-medium text-purple-600 hover:text-purple-500;
-}
+    .password-reset-link {
+        @apply font-medium text-purple-600 hover:text-purple-500;
+    }
 
-.password-reset-footer {
-    @apply pt-4;
-}
+    .password-reset-footer {
+        @apply pt-4;
+    }
 
-/* =========================================================================
+    /* =========================================================================
    Página do Carrinho de Compras (Versão Refinada)
 ========================================================================= */
 
-.cart-page {
-    @apply bg-gray-50 font-sans;
-}
+    .cart-page {
+        @apply bg-gray-50 font-sans;
+    }
 
-.cart-container {
-    @apply container mx-auto px-4 py-8 md:py-16;
-}
+    .cart-container {
+        @apply container mx-auto px-4 py-8 md:py-16;
+    }
 
-/* Cabeçalho */
-.cart-header {
-    @apply flex items-baseline justify-between border-b border-gray-200 pb-4 mb-8;
-}
+    /* Cabeçalho */
+    .cart-header {
+        @apply flex items-baseline justify-between border-b border-gray-200 pb-4 mb-8;
+    }
 
-.cart-title {
-    @apply text-3xl md:text-4xl font-bold text-gray-900;
-}
+    .cart-title {
+        @apply text-3xl md:text-4xl font-bold text-gray-900;
+    }
 
-.cart-continue-link {
-    @apply text-sm font-medium text-indigo-600 hover:text-indigo-500 transition-colors;
-}
+    .cart-continue-link {
+        @apply text-sm font-medium text-indigo-600 hover:text-indigo-500 transition-colors;
+    }
 
-/* Alertas */
-.alert-success {
-    @apply bg-green-100 text-green-800 p-4 rounded-lg mb-6 text-center;
-}
+    /* Alertas */
+    .alert-success {
+        @apply bg-green-100 text-green-800 p-4 rounded-lg mb-6 text-center;
+    }
 
-/* Grid Principal */
-.cart-grid {
-    @apply grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12;
-}
+    /* Grid Principal */
+    .cart-grid {
+        @apply grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12;
+    }
 
-/* Lista de Itens */
-.cart-items-list {
-    @apply lg:col-span-2 space-y-6;
-}
+    /* Lista de Itens */
+    .cart-items-list {
+        @apply lg:col-span-2 space-y-6;
+    }
 
-.cart-item {
-    @apply bg-white rounded-xl shadow-sm p-4 flex flex-wrap md:flex-nowrap gap-4 transition-shadow hover:shadow-md;
-}
+    .cart-item {
+        @apply bg-white rounded-xl shadow-sm p-4 flex flex-wrap md:flex-nowrap gap-4 transition-shadow hover:shadow-md;
+    }
 
-.cart-item-image {
-    @apply w-24 h-24 md:w-28 md:h-28 flex-shrink-0;
-}
-.cart-item-image img {
-    @apply w-full h-full object-cover rounded-lg;
-}
+    .cart-item-image {
+        @apply w-24 h-24 md:w-28 md:h-28 flex-shrink-0;
+    }
 
-.cart-item-details {
-    @apply flex-grow;
-}
+    .cart-item-image img {
+        @apply w-full h-full object-cover rounded-lg;
+    }
 
-.cart-item-name {
-    @apply text-lg font-semibold text-gray-800;
-}
+    .cart-item-details {
+        @apply flex-grow;
+    }
 
-.cart-item-price {
-    @apply text-gray-600 mt-1;
-}
+    .cart-item-name {
+        @apply text-lg font-semibold text-gray-800;
+    }
 
-.cart-quantity-form {
-    @apply mt-3 flex items-center gap-2;
-}
+    .cart-item-price {
+        @apply text-gray-600 mt-1;
+    }
 
-.cart-quantity-input {
-    @apply w-20 text-center border-gray-300 rounded-md shadow-sm py-1.5 focus:ring-indigo-500 focus:border-indigo-500;
-}
+    .cart-quantity-form {
+        @apply mt-3 flex items-center gap-2;
+    }
 
-.cart-update-button {
-    @apply text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors;
-}
+    .cart-quantity-input {
+        @apply w-20 text-center border-gray-300 rounded-md shadow-sm py-1.5 focus:ring-indigo-500 focus:border-indigo-500;
+    }
 
-.cart-item-actions {
-    @apply w-full md:w-auto flex md:flex-col items-center md:items-end justify-between mt-4 md:mt-0;
-}
+    .cart-update-button {
+        @apply text-xs font-medium text-indigo-600 hover:text-indigo-500 transition-colors;
+    }
 
-.cart-item-subtotal {
-    @apply text-lg font-bold text-gray-900;
-}
+    .cart-item-actions {
+        @apply w-full md:w-auto flex md:flex-col items-center md:items-end justify-between mt-4 md:mt-0;
+    }
 
-.cart-remove-button {
-    @apply text-gray-400 hover:text-red-600 transition-colors p-2;
-}
+    .cart-item-subtotal {
+        @apply text-lg font-bold text-gray-900;
+    }
 
-/* Resumo do Pedido */
-.cart-summary {
-    @apply lg:col-span-1 bg-white rounded-xl shadow-sm p-6 h-fit;
-}
+    .cart-remove-button {
+        @apply text-gray-400 hover:text-red-600 transition-colors p-2;
+    }
 
-.cart-summary-title {
-    @apply text-xl font-bold text-gray-900 border-b border-gray-200 pb-4;
-}
+    /* Resumo do Pedido */
+    .cart-summary {
+        @apply lg:col-span-1 bg-white rounded-xl shadow-sm p-6 h-fit;
+    }
 
-.cart-summary-row, .cart-summary-total {
-    @apply flex justify-between items-center py-4;
-}
-.cart-summary-row {
-    @apply text-gray-600;
-}
+    .cart-summary-title {
+        @apply text-xl font-bold text-gray-900 border-b border-gray-200 pb-4;
+    }
 
-.cart-summary-total {
-    @apply text-xl font-bold text-gray-900 border-t border-gray-200;
-}
+    .cart-summary-row,
+    .cart-summary-total {
+        @apply flex justify-between items-center py-4;
+    }
 
-.cart-checkout-button {
-    @apply mt-4 w-full block text-center bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105;
-}
+    .cart-summary-row {
+        @apply text-gray-600;
+    }
 
-/* Estado de Carrinho Vazio */
-.cart-empty {
-    @apply text-center bg-white rounded-xl shadow-sm p-12 md:p-20;
-}
+    .cart-summary-total {
+        @apply text-xl font-bold text-gray-900 border-t border-gray-200;
+    }
 
-.cart-empty-icon {
-    @apply text-7xl text-gray-300;
-}
+    .cart-checkout-button {
+        @apply mt-4 w-full block text-center bg-indigo-600 text-white font-bold py-3 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105;
+    }
 
-.cart-empty-title {
-    @apply mt-6 text-2xl font-bold text-gray-800;
-}
+    /* Estado de Carrinho Vazio */
+    .cart-empty {
+        @apply text-center bg-white rounded-xl shadow-sm p-12 md:p-20;
+    }
 
-.cart-empty-text {
-    @apply mt-2 text-gray-500;
-}
+    .cart-empty-icon {
+        @apply text-7xl text-gray-300;
+    }
 
-.cart-empty-button {
-    @apply mt-8 inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105;
-}
+    .cart-empty-title {
+        @apply mt-6 text-2xl font-bold text-gray-800;
+    }
+
+    .cart-empty-text {
+        @apply mt-2 text-gray-500;
+    }
+
+    .cart-empty-button {
+        @apply mt-8 inline-block bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform hover:scale-105;
+    }
 
 
- /* =========================================================================
+    /* =========================================================================
        Layout (PRODUTOS)
     ========================================================================= */
 
-/* Container de boas-vindas */
-.produtos-container {
-    @apply p-8 text-center;
-}
+    /* Container de boas-vindas */
+    .produtos-container {
+        @apply p-8 text-center;
+    }
 
-.titulo-principal {
-    @apply text-3xl font-bold text-gray-800;
-}
+    .titulo-principal {
+        @apply text-3xl font-bold text-gray-800;
+    }
 
-.subtitulo {
-    @apply text-gray-600;
-}
+    .subtitulo {
+        @apply text-gray-600;
+    }
 
-/* Título da seção de produtos */
-.titulo-secao {
-    @apply text-xl text-center font-semibold my-4;
-}
+    /* Título da seção de produtos */
+    .titulo-secao {
+        @apply text-xl text-center font-semibold my-4;
+    }
 
-/* Lista de produtos */
-.lista-produtos {
-    @apply flex flex-wrap gap-5 px-8 justify-start;
-}
+    /* Lista de produtos */
+    .lista-produtos {
+        @apply flex flex-wrap gap-5 px-8 justify-start;
+    }
 
-/* Card de cada produto */
-.produto-card {
-    @apply border border-gray-300 p-4 rounded-lg w-64 bg-white transition-transform duration-200 ease-in-out shadow-sm;
-}
+    /* Card de cada produto */
+    .produto-card {
+        @apply border border-gray-300 p-4 rounded-lg w-64 bg-white transition-transform duration-200 ease-in-out shadow-sm;
+    }
 
-.produto-card:hover {
-    @apply -translate-y-1 shadow-lg;
-}
+    .produto-card:hover {
+        @apply -translate-y-1 shadow-lg;
+    }
 
-/* Nome do produto */
-.produto-nome {
-    @apply text-lg font-semibold mt-0;
-}
+    /* Nome do produto */
+    .produto-nome {
+        @apply text-lg font-semibold mt-0;
+    }
 
-/* Preço */
-.produto-preco {
-    @apply text-gray-900 font-bold my-2;
-}
+    /* Preço */
+    .produto-preco {
+        @apply text-gray-900 font-bold my-2;
+    }
 
-/* Descrição */
-.produto-descricao {
-    @apply text-sm text-gray-700 mb-4;
-}
+    /* Descrição */
+    .produto-descricao {
+        @apply text-sm text-gray-700 mb-4;
+    }
 
-/* Botão adicionar */
-.btn-adicionar {
-    @apply bg-purple-700 text-white px-4 py-2 rounded-md cursor-pointer transition-colors duration-200;
-}
+    /* Botão adicionar */
+    .btn-adicionar {
+        @apply bg-purple-700 text-white px-4 py-2 rounded-md cursor-pointer transition-colors duration-200;
+    }
 
-.btn-adicionar:hover {
-    @apply bg-purple-800;
-}
+    .btn-adicionar:hover {
+        @apply bg-purple-800;
+    }
 
     /* =========================================================================
        Página de Detalhes do Produto
@@ -889,7 +893,7 @@
     .detalhes-form {
         @apply mt-8;
     }
-    
+
     .detalhes-quantidade-label {
         /* Rótulo "Quantidade:" */
         @apply block text-sm font-medium text-gray-700 mb-2;
@@ -904,5 +908,60 @@
         /* Botão para adicionar ao carrinho, seguindo o estilo roxo */
         @apply mt-6 w-full md:w-auto flex justify-center py-3 px-8 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-transform hover:scale-105;
     }
+
+    /* =========================================================================
+   Formulário de Alterar Senha (Baseado no estilo de Login)
+   ========================================================================= */
+
+.change-password-body-bg {
+    @apply bg-gray-100 font-sans;
+}
+
+.change-password-container {
+    @apply flex items-center justify-center min-h-screen;
+}
+
+.change-password-card {
+    @apply w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg;
+}
+
+.change-password-header {
+    /* O alinhamento é à esquerda, diferente do login */
+    @apply text-left;
+}
+
+.change-password-title {
+    @apply text-3xl font-bold text-gray-800;
+}
+
+.change-password-subtitle {
+    @apply mt-2 text-gray-600;
+}
+
+.change-password-form {
+    /* Aumentando o espaço para corresponder à imagem */
+    @apply space-y-5 pt-4;
+}
+
+.change-password-label {
+    /* Deixando o texto um pouco mais pesado como na imagem */
+    @apply block text-sm font-bold text-gray-700;
+}
+
+.change-password-input {
+    /* Estilo de input ajustado para a imagem */
+    @apply w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent;
+}
+
+.change-password-btn-primary {
+    /* Botão principal para salvar */
+    @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+}
+
+.change-password-cancel-link {
+    /* Link de cancelamento centralizado */
+    @apply block w-full text-center mt-4 font-medium text-indigo-600 hover:text-indigo-500;
+}
+
 
 }

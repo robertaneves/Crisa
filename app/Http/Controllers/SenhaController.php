@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Log;
 
@@ -34,7 +36,7 @@ class SenhaController extends Controller
             Password::sendResetLink($request->only('email'));
 
             return redirect()->route('login')->with('status', 'Link para redefinição de senha enviado para seu e-mail!');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error('Falha ao enviar email de senha: ' . $e->getMessage());
 
             return back()->withInput()->with('error', 'Não foi possível enviar o link. Tente mais tarde.');
@@ -53,7 +55,7 @@ class SenhaController extends Controller
                 'token' => $request->token,
                 'email' => $request->email
             ]);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return redirect()->route('login')->with('error', 'Token inválido ou expirado');
         }
     }
@@ -85,16 +87,43 @@ class SenhaController extends Controller
             return $status === Password::PASSWORD_RESET
                 ? redirect()->route('login')->with('success', 'Senha atualizada com sucesso')
                 : redirect()->route('login')->with('error', 'Senha não atualizada');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             Log::error($e->getMessage());
             return back()->withInput()->with('error', 'Tente mais tarde. Error: ' . $e->getMessage());
         }
     }
 
-    public function linkEmail(){
+    public function linkEmail()
+    {
         return view('auth.formSenhas.linkEmail');
     }
 
+    public function alterarIndex()
+    {
+        return view('auth.alterarIndex');
+    }
 
- 
+    public function alterarSenha(Request $request)
+    {
+        // 1. Regras de validação corrigidas
+        $request->validate([
+            'senha_atual' => 'required',
+            'senha_nova' => ['required', 'confirmed', \Illuminate\Validation\Rules\Password::min(6)],
+        ], [
+            'senha_atual.required' => 'Campo senha atual obrigatório.',
+            'senha_nova.required' => 'Campo senha nova obrigatório.',
+            'senha_nova.confirmed' => 'Campo confirmação de senha nova obrigatório.',
+            'senha_nova.min' => 'A nova senha deve ter no mínimo :min caracteres.',
+        ]);
+
+        $user = Auth::user();
+        if (!Hash::check($request->senha_atual, $user->password)) {
+            return back()->with('error', 'A senha atual não corresponde.');
+        }
+
+        $user->password = Hash::make($request->senha_nova);
+        $user->save();
+
+        return redirect()->route('mostrar.cliente')->with('success', 'Senha alterada com sucesso!');
+    }
 }
