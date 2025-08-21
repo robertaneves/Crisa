@@ -1104,7 +1104,7 @@
     }
 
     .add-product-button {
-        @apply flex items-center bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out;
+        @apply flex items-center bg-slate-100 hover:bg-slate-300 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out;
     }
 
     .add-icon {
@@ -1199,8 +1199,55 @@
         @apply text-red-600 hover:text-red-900 ml-4;
     }
 
-    /* Utilities */
-    .sr-only {
-        @apply sr-only;
-    }
+    
+
+/* O container que segura tudo */
+.switch-container {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+/* Esconde o checkbox real, pois vamos criar um visual customizado */
+.switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* A base do interruptor (a parte cinza/verde) */
+.switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Cor quando 'desligado' */
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+/* O círculo branco que desliza */
+.switch-circle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* A PARTE MAIS IMPORTANTE: O que acontece quando o input está MARCADO */
+.switch-input:checked + .switch-slider {
+    background-color: #28a745; /* Cor verde quando 'ligado' */
+}
+
+.switch-input:checked + .switch-slider .switch-circle {
+    transform: translateX(22px); /* Move o círculo para a direita */
+}
+
 }

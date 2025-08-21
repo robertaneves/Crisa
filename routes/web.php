@@ -61,4 +61,5 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('/indexProduto', [AdminController::class, 'indexProduto'])->name('index.admin.produto');
     Route::get('/criarProduto', [AdminController::class, 'criarProduto'])->name('criar.admin.produto');
     Route::post('/criarProduto', [AdminController::class, 'storeProduto'])->name('store.admin.produto');
+    Route::post('/produtos/{produto}/toggle-status', [ProdutoController::class, 'toggleStatus'])->name('produto.toggleStatus');
 });

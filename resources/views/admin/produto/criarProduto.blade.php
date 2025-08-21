@@ -71,7 +71,7 @@
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{ old('descricao') }}</textarea>
                             </div>
 
-                            <div class="mb-4">
+                            {{-- <div class="mb-4">
                                 <label class="block text-gray-700 text-sm font-bold mb-2">Categorias</label>
                                 <div class="bg-white p-2 border rounded max-h-40 overflow-y-auto">
                                     @foreach ($categorias as $categoria)
@@ -82,7 +82,7 @@
                                         </div>
                                     @endforeach
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
 
