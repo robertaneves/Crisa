@@ -913,55 +913,294 @@
    Formulário de Alterar Senha (Baseado no estilo de Login)
    ========================================================================= */
 
-.change-password-body-bg {
-    @apply bg-gray-100 font-sans;
-}
+    .change-password-body-bg {
+        @apply bg-gray-100 font-sans;
+    }
 
-.change-password-container {
-    @apply flex items-center justify-center min-h-screen;
-}
+    .change-password-container {
+        @apply flex items-center justify-center min-h-screen;
+    }
 
-.change-password-card {
-    @apply w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg;
-}
+    .change-password-card {
+        @apply w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-lg;
+    }
 
-.change-password-header {
-    /* O alinhamento é à esquerda, diferente do login */
-    @apply text-left;
-}
+    .change-password-header {
+        /* O alinhamento é à esquerda, diferente do login */
+        @apply text-left;
+    }
 
-.change-password-title {
-    @apply text-3xl font-bold text-gray-800;
-}
+    .change-password-title {
+        @apply text-3xl font-bold text-gray-800;
+    }
 
-.change-password-subtitle {
-    @apply mt-2 text-gray-600;
-}
+    .change-password-subtitle {
+        @apply mt-2 text-gray-600;
+    }
 
-.change-password-form {
-    /* Aumentando o espaço para corresponder à imagem */
-    @apply space-y-5 pt-4;
-}
+    .change-password-form {
+        /* Aumentando o espaço para corresponder à imagem */
+        @apply space-y-5 pt-4;
+    }
 
-.change-password-label {
-    /* Deixando o texto um pouco mais pesado como na imagem */
-    @apply block text-sm font-bold text-gray-700;
-}
+    .change-password-label {
+        /* Deixando o texto um pouco mais pesado como na imagem */
+        @apply block text-sm font-bold text-gray-700;
+    }
 
-.change-password-input {
-    /* Estilo de input ajustado para a imagem */
-    @apply w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent;
-}
+    .change-password-input {
+        /* Estilo de input ajustado para a imagem */
+        @apply w-full px-4 py-3 mt-1 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent;
+    }
 
-.change-password-btn-primary {
-    /* Botão principal para salvar */
-    @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
-}
+    .change-password-btn-primary {
+        /* Botão principal para salvar */
+        @apply w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
 
-.change-password-cancel-link {
-    /* Link de cancelamento centralizado */
-    @apply block w-full text-center mt-4 font-medium text-indigo-600 hover:text-indigo-500;
-}
+    .change-password-cancel-link {
+        /* Link de cancelamento centralizado */
+        @apply block w-full text-center mt-4 font-medium text-indigo-600 hover:text-indigo-500;
+    }
 
 
+    /* =========================================================================
+   Painel de Administrador Layout
+   ========================================================================= */
+
+    .admin-body {
+        @apply bg-gray-100;
+    }
+
+    .admin-container {
+        @apply flex h-screen bg-gray-100;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        @apply hidden md:flex flex-col w-64 bg-slate-900 text-gray-300;
+    }
+
+    .sidebar-header {
+        @apply flex items-center justify-center h-16 border-b border-slate-800;
+    }
+
+    .sidebar-title {
+        @apply text-xl font-bold text-white;
+    }
+
+    .sidebar-content {
+        @apply flex flex-col flex-1 overflow-y-auto;
+    }
+
+    .sidebar-nav {
+        @apply flex-1 px-4 py-4;
+    }
+
+    .sidebar-footer {
+        @apply p-4 border-t border-slate-800;
+    }
+
+    /* Navigation Links */
+    .nav-link {
+        @apply flex items-center px-4 py-2 mt-2 rounded-lg hover:bg-slate-700;
+    }
+
+    .nav-link-icon {
+        @apply h-6 w-6 mr-3;
+    }
+
+    .footer-link-icon {
+        @apply h-5 w-5 mr-2;
+    }
+
+    /* Main Content Area */
+    .main-content {
+        @apply flex flex-col flex-1 overflow-y-auto;
+    }
+
+    /* Main Header */
+    .main-header {
+        @apply flex items-center justify-between p-6 bg-white border-b border-gray-200;
+    }
+
+    .header-left {
+        @apply flex items-center;
+    }
+
+    .header-right {
+        @apply flex items-center space-x-4;
+    }
+
+    .page-title {
+        @apply text-2xl font-bold text-gray-800;
+    }
+
+    .page-subtitle {
+        @apply text-sm text-gray-500 mt-1;
+    }
+
+    /* Header Components */
+    .mobile-menu-button {
+        @apply text-gray-500 md:hidden mr-4;
+    }
+
+    .notification-button {
+        @apply p-2 text-gray-500 bg-gray-100 rounded-full hover:bg-gray-200;
+    }
+
+    .user-profile-container {
+        @apply relative;
+    }
+
+    .user-profile-button {
+        @apply flex items-center space-x-2;
+    }
+
+    .user-avatar {
+        @apply w-10 h-10 rounded-full;
+    }
+
+    .user-name {
+        @apply hidden sm:inline font-semibold text-gray-700;
+    }
+
+
+    /* =========================================================================
+   Painel de Administrador Produto
+   ========================================================================= */
+
+    .main-content {
+        @apply flex-1 p-6;
+    }
+
+    .page-header {
+        @apply flex items-center;
+    }
+
+    .mobile-menu-button {
+        @apply text-gray-500 md:hidden mr-4;
+    }
+
+    .menu-icon {
+        @apply h-6 w-6;
+    }
+
+    .page-title {
+        @apply text-2xl font-bold text-gray-800;
+    }
+
+    .page-subtitle {
+        @apply text-sm text-gray-500 mt-1;
+    }
+
+    /* Section Header & Actions */
+    .section-header {
+        @apply flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6;
+    }
+
+    .section-title {
+        @apply text-xl font-semibold text-gray-800 mb-4 sm:mb-0;
+    }
+
+    .add-product-button {
+        @apply flex items-center bg-slate-800 hover:bg-slate-900 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out;
+    }
+
+    .add-icon {
+        @apply h-5 w-5 mr-2;
+    }
+
+    /* Table Styling */
+    .table-container {
+        @apply bg-white rounded-lg shadow overflow-x-auto;
+    }
+
+    .product-table {
+        @apply w-full min-w-full divide-y divide-gray-200;
+    }
+
+    .table-head {
+        @apply bg-gray-50;
+    }
+
+    .table-body {
+        @apply bg-white divide-y divide-gray-200;
+    }
+
+    /* Table Cells */
+    .table-header-cell {
+        @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+    }
+
+    .table-header-cell-actions {
+        @apply relative px-6 py-3;
+    }
+
+    .table-cell {
+        @apply px-6 py-4 whitespace-nowrap;
+    }
+
+    .table-cell-text {
+        @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+    }
+
+    .table-cell-actions {
+        @apply px-6 py-4 whitespace-nowrap text-right text-sm font-medium;
+    }
+
+    /* Product Info inside Table */
+    .product-info-container {
+        @apply flex items-center;
+    }
+
+    .product-image-container {
+        @apply flex-shrink-0 h-10 w-10;
+    }
+
+    .product-image {
+        @apply h-10 w-10 rounded-md object-cover;
+    }
+
+    .product-text-container {
+        @apply ml-4;
+    }
+
+    .product-name {
+        @apply text-sm font-medium text-gray-900;
+    }
+
+    .product-sku {
+        @apply text-sm text-gray-500;
+    }
+
+    /* Badges and Links */
+    .stock-badge {
+        @apply px-2 inline-flex text-xs leading-5 font-semibold rounded-full;
+    }
+
+    .stock-badge-in-stock {
+        @apply bg-green-100 text-green-800;
+    }
+
+    .stock-badge-low-stock {
+        @apply bg-yellow-100 text-yellow-800;
+    }
+
+    .stock-badge-out-of-stock {
+        @apply bg-red-100 text-red-800;
+    }
+
+    .edit-link {
+        @apply text-indigo-600 hover:text-indigo-900;
+    }
+
+    .delete-link {
+        @apply text-red-600 hover:text-red-900 ml-4;
+    }
+
+    /* Utilities */
+    .sr-only {
+        @apply sr-only;
+    }
 }

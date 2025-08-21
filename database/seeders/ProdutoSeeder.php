@@ -18,7 +18,7 @@ class ProdutoSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         Produto::create([
-            'name'=> 'Camiseta Branca Básica',
+            'nome'=> 'Camiseta Branca Básica',
             'preco'=> 79.90,
             'tamanho'=> 'M',
             'descricao'=> 'Uma camiseta de algodão confortável para o dia a dia.',
@@ -27,18 +27,18 @@ class ProdutoSeeder extends Seeder
         ]);
 
         Produto::create([
-            'name' => 'Calça Jeans Slim',
+            'nome' => 'Calça Jeans Slim',
             'preco' => 189.90,
-            'tamanho' => '42',
+            'tamanho' => 'G',
             'descricao' => 'Calça jeans com lavagem moderna e corte slim.',
             'quantidade' => 30,
             'ativo' => true,
         ]);
 
         Produto::create([
-            'name' => 'Macacão',
+            'nome' => 'Macacão',
             'preco' => 129.90,
-            'tamanho' => '42',
+            'tamanho' => 'M',
             'descricao' => 'Macacão jeans corte plus.',
             'quantidade' => 80,
             'ativo' => true,

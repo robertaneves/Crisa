@@ -58,4 +58,7 @@ Route::delete('/carrinho/remover/{produto}', [CarrinhoController::class, 'delete
 
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/indexProduto', [AdminController::class, 'indexProduto'])->name('index.admin.produto');
+    Route::get('/criarProduto', [AdminController::class, 'criarProduto'])->name('criar.admin.produto');
+    Route::post('/criarProduto', [AdminController::class, 'storeProduto'])->name('store.admin.produto');
 });

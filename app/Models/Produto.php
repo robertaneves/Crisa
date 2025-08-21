@@ -16,6 +16,7 @@ class Produto extends Model
      *
      * @var string
      */
+    public static $tamanhosDisponiveis = ['P', 'M', 'G', 'GG', 'G1', 'G2', 'G3', 'Único', 'Outro'];
     protected $table = 'produto';
 
     /**
@@ -28,7 +29,7 @@ class Produto extends Model
         'preco',
         'tamanho',
         'descricao',
-        'quantidade', 
+        'quantidade',
         'ativo',
     ];
 
@@ -46,6 +47,9 @@ class Produto extends Model
      * Define o relacionamento de Muitos para Muitos com Categoria.
      * Um produto pode pertencer a muitas categorias.
      */
+
+
+
     public function categorias(): BelongsToMany
     {
         return $this->belongsToMany(Categoria::class, 'categoria_de_produtos');
