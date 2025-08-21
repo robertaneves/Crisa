@@ -23,11 +23,15 @@ class AdminController extends Controller
     public function criarProduto()
     {
         $produto = Produto::all();
-        return view('admin.produto.criarProduto', compact('produto'));
+        $categorias = Categoria::all();
+        $tamanhos = Produto::$tamanhosDisponiveis;
+        return view('admin.produto.criarProduto', compact('produto', 'categorias', 'tamanhos'));
     }
 
     public function storeProduto(ProdutoRequest $request)
     {
+
+
         $dadosValidados = $request->validated();
 
         $produto = Produto::create([
