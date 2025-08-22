@@ -18,7 +18,7 @@ O foco do projeto é criar um sistema completo, desde a autenticação do usuár
   - [Alpine.js](https://alpinejs.dev/)
   - Blade Templates
 - **Banco de Dados:**
-  - MySQL (ou outro de sua preferência, como PostgreSQL)
+  - MySQL 
 - **Ferramentas:**
   - [Vite](https://vitejs.dev/)
   - [Composer](https://getcomposer.org/)
@@ -29,16 +29,32 @@ O foco do projeto é criar um sistema completo, desde a autenticação do usuár
 Atualmente, o projeto conta com as seguintes funcionalidades:
 
 - **Autenticação de Usuário Completa:**
-  - **Cadastro de Clientes:** Formulário completo com validação de dados.
-  - **Login e Logout:** Sistema de sessão seguro.
-  - **Recuperação de Senha:** Fluxo de "Esqueci minha senha" com envio de link por e-mail.
+    - **Cadastro de Clientes:** Formulário completo com validação de dados.
+    - **Login e Logout:** Sistema de sessão seguro.
+    - **Recuperação de Senha:** Fluxo de "Esqueci minha senha" com envio de link por e-mail.
 - **Painel do Cliente ("Minha Conta"):**
-  - **Visualização de Dados Pessoais:** Página que exibe as informações do usuário.
-  - **Edição de Dados Pessoais:** Interface interativa (com modo de visualização e edição) para o cliente atualizar suas informações.
-  - **Gerenciamento de Endereço:** Seção dedicada para o cliente visualizar e atualizar seu endereço de entrega.
+    - **Visualização de Dados Pessoais:** Página que exibe as informações do usuário.
+    - **Edição de Dados Pessoais:** Interface interativa para o cliente atualizar suas informações.
+    - **Gerenciamento de Endereço:** Seção dedicada para o cliente visualizar e atualizar seu endereço de entrega.
+    - **Alterar Senha:** Funcionalidade para o usuário alterar sua senha.
 - **Páginas Institucionais:**
-  - Página "Sobre Nós" com a história da marca.
-  - Estrutura para "Política de Privacidade" e "Termos de Uso".
+    - Página "Sobre Nós" com a história da marca.
+- **Funcionalidades de E-commerce:**
+    - **Visualização de Produtos:** Página inicial que exibe os produtos.
+    - **Detalhes do Produto:** Página para visualizar detalhes de um produto específico.
+    - **Carrinho de Compras:**
+        - Adicionar produtos ao carrinho.
+        - Atualizar a quantidade de produtos no carrinho.
+        - Remover produtos do carrinho.
+        - Visualizar o carrinho de compras.
+    - **Checkout:** Página para finalizar a compra (sem integração com gateway de pagamento implementada).
+- **Painel de Administrador:**
+    - **Dashboard:** Painel administrativo para gerenciamento da loja.
+    - **Gerenciamento de Produtos:**
+        - Listar produtos.
+        - Criar novos produtos.
+        - Editar produtos existentes.
+        - Excluir produtos.
 
 ## ✍️ Autor
 
@@ -48,4 +64,4 @@ Atualmente, o projeto conta com as seguintes funcionalidades:
 - LinkedIn: ``
 
 ---
-*Este projeto foi desenvolvido como parte de um projeto pessoal, estudo.*
+*Este projeto foi desenvolvido como parte de um projeto pessoal e estudo.*

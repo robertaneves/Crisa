@@ -11,14 +11,14 @@
                 <div>
                     <div class="mb-4">
                         <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome do Produto</label>
-                        <input type="text" name="nome" id="nome" value="{{ old('nome') }}"
+                        <input type="text" name="nome" id="nome" value="{{ old('nome', $produto->nome) }}"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
 
                     <div class="mb-4">
                         <label for="preco" class="block text-gray-700 text-sm font-bold mb-2">Preço (R$)</label>
-                        <input type="number" name="preco" id="preco" value="{{ old('preco') }}" step="0.01"
+                        <input type="number" name="preco" id="preco" value="{{ old('preco', $produto->preco) }}" step="0.01"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
@@ -26,7 +26,7 @@
                     <div class="mb-4">
                         <label for="quantidade" class="block text-gray-700 text-sm font-bold mb-2">Quantidade em
                             Stock</label>
-                        <input type="number" name="quantidade" id="quantidade" value="{{ old('quantidade') }}"
+                        <input type="number" name="quantidade" id="quantidade" value="{{ old('quantidade', $produto->quantidade) }}"
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             required>
                     </div>
@@ -41,7 +41,7 @@
                             required>
                             <option value="">Selecione um tamanho</option>
                             @foreach ($tamanhos as $tamanho)
-                                <option value="{{ $tamanho }}" {{ old('tamanho') == $tamanho ? 'selected' : '' }}>
+                                <option value="{{ $tamanho }}" {{ old('tamanho', $produto->tamanho) == $tamanho ? 'selected' : '' }}>
                                     {{ $tamanho }}
                                 </option>
                             @endforeach
@@ -54,7 +54,8 @@
                             <div class="mb-4">
                                 <label for="descricao" class="block text-gray-700 text-sm font-bold mb-2">Descrição</label>
                                 <textarea name="descricao" id="descricao" rows="5"
-                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{ old('descricao') }}</textarea>
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 
+                                    text-gray-700 leading-tight focus:outline-none focus:shadow-outline">{{ old('descricao', $produto->descricao) }}</textarea>
                             </div>
 
                             {{-- <div class="mb-4">

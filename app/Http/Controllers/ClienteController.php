@@ -55,8 +55,6 @@ class ClienteController extends Controller
         }
     }
 
-
-
     public function dadosCliente()
     {
         $user = Auth::user();
