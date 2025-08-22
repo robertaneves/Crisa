@@ -13,9 +13,12 @@ use Illuminate\Support\Facades\Log;
 
 class AdminController extends Controller
 {
-    public function index()
-    {
+    public function layout(){
         return view('admin.layouts.layout');
+    }
+    
+    public function index(){
+        return view('admin.index');
     }
 
     public function indexProduto()

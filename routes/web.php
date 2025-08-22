@@ -57,7 +57,8 @@ Route::patch('/carrinho/atualizar/{produto}', [CarrinhoController::class, 'atual
 Route::delete('/carrinho/remover/{produto}', [CarrinhoController::class, 'deleteCarrinho'])->name('delete.carrinho');
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin', [AdminController::class, 'layout']);
+    Route::get('/index', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/indexProduto', [AdminController::class, 'indexProduto'])->name('index.admin.produto');
 
     Route::get('/criarProduto', [AdminController::class, 'criarProduto'])->name('criar.admin.produto');
