@@ -1,28 +1,34 @@
 @extends('layouts.layout')
 
 @section('content')
-
     <div class="produtos-container">
         <h2 class="titulo-principal">Bem-vindo à Loja Crisa!</h2>
         <p class="subtitulo">Aqui você encontra os melhores produtos.</p>
     </div>
 
-    {{-- <h1 class="titulo-secao">Nossos Produtos</h1> --}}
     <div class="lista-produtos">
-        {{-- Loop para percorrer cada produto enviado pelo controller --}}
-        @foreach($produtos as $produto)
-    <a href="{{ route('detalhes.produto', ['produto' => $produto->id]) }}">
-        <div class="produto-card">
-            <h2 class="produto-nome">{{ $produto->nome }}</h2>
-            <p class="produto-preco"><strong>Preço:</strong> R$ {{ number_format($produto->preco, 2, ',', '.') }}</p>
-            <p class="produto-descricao">{{ $produto->descricao }}</p>
-            <form action="{{ route('add.carrinho', ['produto' => $produto->id]) }}" method="POST">
-                @csrf
-                <button type="submit" class="btn-adicionar">Adicionar ao Carrinho</button>
-            </form>
-        </div>
-    </a>
-@endforeach
+        @foreach ($produtos as $produto)
+            @php
+                $imagemPrincipal = $produto->imagens->where('principal', true)->first();
+                $urlImagem = $imagemPrincipal ? asset('storage/' . $imagemPrincipal->pasta_imagem) : 'https://placehold.co/300x300?text=Produto';
+            @endphp
 
+            <div class="produto-card">
+                <a href="{{ route('detalhes.produto', ['produto' => $produto->id]) }}" class="produto-link-imagem">
+                    <div class="produto-imagem-wrapper">
+                        <img src="{{ $urlImagem }}" alt="{{ $produto->nome }}" class="produto-imagem">
+                    </div>
+                </a>
+                <div class="produto-info">
+                    <h2 class="produto-nome">{{ $produto->nome }}</h2>
+                    <p class="produto-preco">R$ {{ number_format($produto->preco, 2, ',', '.') }}</p>
+                    <p class="produto-descricao">{{ Str::limit($produto->descricao, 80) }}</p>
+                    <form action="{{ route('add.carrinho', ['produto' => $produto->id]) }}" method="POST" class="mt-auto">
+                        @csrf
+                        <button type="submit" class="btn-adicionar">Adicionar ao Carrinho</button>
+                    </form>
+                </div>
+            </div>
+        @endforeach
     </div>
 @endsection

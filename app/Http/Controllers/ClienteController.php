@@ -11,11 +11,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
-class ClienteController extends Controller
-{
-
+class ClienteController extends Controller{
     public function layout(){
-        $produtos = Produto::where('ativo', true)->get();
+        $produtos = Produto::all();
         $categorias = Categoria::all();
         return view('welcome', compact('produtos', 'categorias'));
     }

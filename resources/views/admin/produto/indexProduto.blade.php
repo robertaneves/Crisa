@@ -2,12 +2,6 @@
 @section('content')
     <main class="main-content">
         <div class="page-header">
-            <button class="mobile-menu-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
             <div>
                 <h2 class="page-title">Produtos</h2>
                 <p class="page-subtitle">Gerencie os produtos da sua loja</p>
@@ -16,13 +10,7 @@
 
         <div class="section-header">
             <h3 class="section-title">Todos os Produtos</h3>
-            <a href="{{ route('criar.admin.produto') }}" class="add-product-button">
-                {{-- <svg xmlns="http://www.w3.org/2000/svg" class="add-icon" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg> --}}
-                Adicionar Produto
-            </a>
+            <a href="{{ route('criar.admin.produto') }}" class="add-product-button">Adicionar Produto</a>
         </div>
 
         <div class="table-container">
@@ -33,7 +21,7 @@
                         <th scope="col" class="table-header-cell">Categoria</th>
                         <th scope="col" class="table-header-cell">Preço</th>
                         <th scope="col" class="table-header-cell">Estoque</th>
-                        {{-- <th scope="col" class="table-header-cell">Ativo</th> --}}
+                        <th scope="col" class="table-header-cell">Ativo</th>
                         <th scope="col" class="table-header-cell-actions">
                             <span class="table-header-cell">Ações</span>
                         </th>
@@ -46,9 +34,14 @@
                                 <div class="product-info-container">
                                     <div class="product-image-container">
                                         {{-- Se tiver imagem salva no banco --}}
+                                        @php
+                                            $imagemPrincipal = $produto->imagens->where('principal', true)->first();
+                                        @endphp
+
                                         <img class="product-image"
-                                            src="{{ $produto->imagem ?? 'https://placehold.co/100x100' }}"
+                                            src="{{ $imagemPrincipal ? asset('storage/' . $imagemPrincipal->pasta_imagem) : 'https://placehold.co/100x100' }}"
                                             alt="{{ $produto->nome }}">
+
                                     </div>
                                     <div class="product-text-container">
                                         <div class="product-name">{{ $produto->nome }}</div>
@@ -82,19 +75,20 @@
                                 @endif
                             </td>
 
-                            {{-- <td>
+                            <td>
                                 <label class="switch-container">
-                                    <input type="checkbox" name="ativo" class="switch-input" {{ old('ativo', $produto->ativo ?? false) ? 'checked' : '' }}>
+                                    <input type="checkbox" name="ativo" class="switch-input"
+                                        {{ old('ativo', $produto->ativo ?? false) ? 'checked' : '' }}>
                                     <span class="switch-slider">
                                         <span class="switch-circle"></span>
                                     </span>
                                 </label>
-                            </td> --}}
+                            </td>
 
                             <td class="table-cell-actions">
                                 <a href="{{ route('editar.admin.produto', $produto->id) }}" class="edit-link">Editar</a>
                                 <form action=" {{ route('delete.admin.produto', $produto->id) }}" method="POST"
-                                    class="inline">
+                                    class="inline delete-form">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="delete-link">Excluir</button>
@@ -103,7 +97,6 @@
                         </tr>
                     @endforeach
                 </tbody>
-
             </table>
         </div>
     </main>

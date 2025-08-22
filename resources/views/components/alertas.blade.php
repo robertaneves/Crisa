@@ -44,3 +44,31 @@
         });
     </script>
 @endif
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Seleciona todos os formulários com a classe delete-form
+        const deleteForms = document.querySelectorAll('.delete-form');
+
+        deleteForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // previne o envio imediato do formulário
+
+                Swal.fire({
+                    title: 'Tem certeza?',
+                    text: "Essa ação não pode ser desfeita!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sim, excluir!',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit(); // envia o formulário se confirmado
+                    }
+                });
+            });
+        });
+    });
+</script>

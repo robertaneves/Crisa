@@ -1199,55 +1199,74 @@
         @apply text-red-600 hover:text-red-900 ml-4;
     }
 
-    
 
-/* O container que segura tudo */
-.switch-container {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 28px;
-}
 
-/* Esconde o checkbox real, pois vamos criar um visual customizado */
-.switch-input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
+    /* O container que segura tudo */
+    .switch-container {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+    }
 
-/* A base do interruptor (a parte cinza/verde) */
-.switch-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc; /* Cor quando 'desligado' */
-    border-radius: 34px;
-    transition: background-color 0.3s;
-}
+    /* Esconde o checkbox real, pois vamos criar um visual customizado */
+    .switch-input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
 
-/* O círculo branco que desliza */
-.switch-circle {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
+    /* A base do interruptor (a parte cinza/verde) */
+    .switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        /* Cor quando 'desligado' */
+        border-radius: 34px;
+        transition: background-color 0.3s;
+    }
 
-/* A PARTE MAIS IMPORTANTE: O que acontece quando o input está MARCADO */
-.switch-input:checked + .switch-slider {
-    background-color: #28a745; /* Cor verde quando 'ligado' */
-}
+    /* O círculo branco que desliza */
+    .switch-circle {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+    }
 
-.switch-input:checked + .switch-slider .switch-circle {
-    transform: translateX(22px); /* Move o círculo para a direita */
-}
+    /* A PARTE MAIS IMPORTANTE: O que acontece quando o input está MARCADO */
+    .switch-input:checked+.switch-slider {
+        background-color: #28a745;
+        /* Cor verde quando 'ligado' */
+    }
+
+    .switch-input:checked+.switch-slider .switch-circle {
+        transform: translateX(22px);
+        /* Move o círculo para a direita */
+    }
+
+
+    /* =========================================================================
+        Imagem do  Produto
+   ========================================================================= */
+    .item-imagem {
+        @apply w-24 h-24 md:w-32 md:h-32 flex-shrink-0 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center border border-gray-200;
+
+    }
+
+    .item-imagem img {
+        @apply w-full h-full object-cover object-center;
+
+    }
+
+   
 
 }

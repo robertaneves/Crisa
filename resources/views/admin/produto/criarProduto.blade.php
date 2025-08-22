@@ -7,6 +7,13 @@
             @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {{-- Coluna da Esquerda --}}
+                <div class="form-group">
+                    <label for="imagens">Imagens do Produto</label><br>
+                    <input type="file" name="imagens[]" id="imagens" multiple class="form-control">
+                    <div id="preview-container" class="flex gap-2 mt-2"></div>
+                </div>
+
+
                 <div>
                     <div class="mb-4">
                         <label for="nome" class="block text-gray-700 text-sm font-bold mb-2">Nome do Produto</label>
@@ -84,4 +91,24 @@
             </div>
         </form>
     </div>
+
+    <script>
+        const input = document.getElementById('imagens');
+        const previewContainer = document.getElementById('preview-container');
+
+        input.addEventListener('change', function() {
+            previewContainer.innerHTML = ''; 
+
+            Array.from(this.files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('w-24', 'h-24', 'object-cover', 'rounded-md', 'border');
+                    previewContainer.appendChild(img);
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+    </script>
 @endsection
