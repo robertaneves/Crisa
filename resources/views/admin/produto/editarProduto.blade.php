@@ -1,9 +1,10 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    <h1 class="text-3xl mb-6">Adicionar Novo Produto</h1>
+    <h1 class="text-3xl mb-6">Editar Produto</h1>
     <div class="bg-white shadow-md rounded-lg p-8">
-        <form action="{{ route('store.admin.produto') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('update.admin.produto', $produto->id) }}" method="POST" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {{-- Coluna da Esquerda --}}
@@ -77,7 +78,7 @@
                             Cancelar
                         </a>
                         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Guardar Produto
+                            Atualizar Produto
                         </button>
                     </div>
                 </div>

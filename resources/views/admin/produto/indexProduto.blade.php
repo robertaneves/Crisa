@@ -40,7 +40,7 @@
                     </tr>
                 </thead>
                 <tbody class="table-body">
-                    @foreach($produtos as $produto)
+                    @foreach ($produtos as $produto)
                         <tr>
                             <td class="table-cell">
                                 <div class="product-info-container">
@@ -59,7 +59,7 @@
 
                             <td class="table-cell-text">
                                 {{-- Se tiver relação com categorias --}}
-                                @if($produto->categorias->count())
+                                @if ($produto->categorias->count())
                                     {{ $produto->categorias->pluck('nome')->join(', ') }}
                                 @else
                                     Sem categoria
@@ -71,7 +71,7 @@
                             </td>
 
                             <td class="table-cell">
-                                @if($produto->quantidade > 0)
+                                @if ($produto->quantidade > 0)
                                     <span class="stock-badge stock-badge-in-stock">
                                         {{ $produto->quantidade }} em estoque
                                     </span>
@@ -92,8 +92,8 @@
                             </td> --}}
 
                             <td class="table-cell-actions">
-                                <a href=" {{-- {{ route('produto.edit', $produto->id) }} --}}  " class="edit-link">Editar</a>
-                                <form action=" {{-- {{ route('produto.destroy', $produto->id) }} --}} " method="POST"
+                                <a href="{{ route('editar.admin.produto', $produto->id) }}" class="edit-link">Editar</a>
+                                <form action=" {{ route('delete.admin.produto', $produto->id) }}" method="POST"
                                     class="inline">
                                     @csrf
                                     @method('DELETE')
@@ -107,5 +107,4 @@
             </table>
         </div>
     </main>
-    
 @endsection

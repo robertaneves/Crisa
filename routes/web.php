@@ -56,10 +56,14 @@ Route::post('/carrinho/adicionar/{produto}', [CarrinhoController::class, 'addCar
 Route::patch('/carrinho/atualizar/{produto}', [CarrinhoController::class, 'atualizarCarrinho'])->name('atualizar.carrinho');
 Route::delete('/carrinho/remover/{produto}', [CarrinhoController::class, 'deleteCarrinho'])->name('delete.carrinho');
 
-Route::middleware(['auth', 'admin'])->group(function(){
+Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
     Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
     Route::get('/indexProduto', [AdminController::class, 'indexProduto'])->name('index.admin.produto');
+
     Route::get('/criarProduto', [AdminController::class, 'criarProduto'])->name('criar.admin.produto');
     Route::post('/criarProduto', [AdminController::class, 'storeProduto'])->name('store.admin.produto');
-    Route::post('/produtos/{produto}/toggle-status', [ProdutoController::class, 'toggleStatus'])->name('produto.toggleStatus');
+
+    Route::get('/editarProduto/{produto}', [AdminController::class, 'editarProduto'])->name('editar.admin.produto');
+    Route::put('/editarProduto/{produto}', [AdminController::class, 'updateProduto'])->name('update.admin.produto');
+    Route::delete('/deleteProduto/{produto}', [AdminController::class, 'deleteProduto'])->name('delete.admin.produto');
 });

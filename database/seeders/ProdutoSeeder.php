@@ -38,9 +38,72 @@ class ProdutoSeeder extends Seeder
         Produto::create([
             'nome' => 'Macacão',
             'preco' => 129.90,
-            'tamanho' => 'M',
+            'tamanho' => 'P',
             'descricao' => 'Macacão jeans corte plus.',
             'quantidade' => 80,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Tênis Esportivo',
+            'preco' => 249.90,
+            'tamanho' => 'G1',
+            'descricao' => 'Tênis leve e respirável para corridas e caminhadas.',
+            'quantidade' => 60,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Jaqueta de Couro',
+            'preco' => 399.90,
+            'tamanho' => 'GG',
+            'descricao' => 'Jaqueta de couro sintético estilosa e durável.',
+            'quantidade' => 20,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Saia Midi',
+            'preco' => 149.90,
+            'tamanho' => 'P',
+            'descricao' => 'Saia midi em tecido leve, ideal para ocasiões casuais.',
+            'quantidade' => 40,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Boné Preto',
+            'preco' => 59.90,
+            'tamanho' => 'G3',
+            'descricao' => 'Boné ajustável em algodão com estilo clássico.',
+            'quantidade' => 100,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Relógio de Pulso',
+            'preco' => 499.90,
+            'tamanho' => 'Único',
+            'descricao' => 'Relógio de pulso elegante, à prova d\'água até 50m.',
+            'quantidade' => 15,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Chinelo Slide',
+            'preco' => 89.90,
+            'tamanho' => 'M',
+            'descricao' => 'Chinelo confortável, perfeito para o verão.',
+            'quantidade' => 70,
+            'ativo' => true,
+        ]);
+
+        Produto::create([
+            'nome' => 'Mochila Escolar',
+            'preco' => 159.90,
+            'tamanho' => 'Único',
+            'descricao' => 'Mochila resistente com compartimento para notebook.',
+            'quantidade' => 35,
             'ativo' => true,
         ]);
     }
