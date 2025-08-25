@@ -23,7 +23,8 @@ class ProdutoSeeder extends Seeder
             'tamanho'=> 'M',
             'descricao'=> 'Uma camiseta de algodão confortável para o dia a dia.',
             'quantidade'=> 50,
-            'ativo'=> true
+            'ativo'=> true,
+            'imagem' => 'img/produtos/Camisa Branca.jpg'
         ]);
 
         Produto::create([
@@ -33,6 +34,7 @@ class ProdutoSeeder extends Seeder
             'descricao' => 'Calça jeans com lavagem moderna e corte slim.',
             'quantidade' => 30,
             'ativo' => true,
+            'imagem' => 'img/produtos/Calça Jeans.webp'
         ]);
 
         Produto::create([
@@ -42,6 +44,7 @@ class ProdutoSeeder extends Seeder
             'descricao' => 'Macacão jeans corte plus.',
             'quantidade' => 80,
             'ativo' => true,
+            'imagem' => 'img/produtos/Macacão Jeans.webp'
         ]);
 
         Produto::create([
@@ -51,6 +54,7 @@ class ProdutoSeeder extends Seeder
             'descricao' => 'Tênis leve e respirável para corridas e caminhadas.',
             'quantidade' => 60,
             'ativo' => true,
+            'imagem' => 'img/produtos/Beyoncé Ivy Park Tênis.webp'
         ]);
 
         Produto::create([
@@ -60,51 +64,53 @@ class ProdutoSeeder extends Seeder
             'descricao' => 'Jaqueta de couro sintético estilosa e durável.',
             'quantidade' => 20,
             'ativo' => true,
+            'imagem' => 'img/produtos/Jaqueta De Couro.jpg'
         ]);
 
-        Produto::create([
-            'nome' => 'Saia Midi',
-            'preco' => 149.90,
-            'tamanho' => 'P',
-            'descricao' => 'Saia midi em tecido leve, ideal para ocasiões casuais.',
-            'quantidade' => 40,
-            'ativo' => true,
-        ]);
+        // Produto::create([
+        //     'nome' => 'Saia Midi',
+        //     'preco' => 149.90,
+        //     'tamanho' => 'P',
+        //     'descricao' => 'Saia midi em tecido leve, ideal para ocasiões casuais.',
+        //     'quantidade' => 40,
+        //     'ativo' => true,
+        // ]);
 
-        Produto::create([
-            'nome' => 'Boné Preto',
-            'preco' => 59.90,
-            'tamanho' => 'G3',
-            'descricao' => 'Boné ajustável em algodão com estilo clássico.',
-            'quantidade' => 100,
-            'ativo' => true,
-        ]);
+        // Produto::create([
+        //     'nome' => 'Boné Preto',
+        //     'preco' => 59.90,
+        //     'tamanho' => 'G3',
+        //     'descricao' => 'Boné ajustável em algodão com estilo clássico.',
+        //     'quantidade' => 100,
+        //     'ativo' => true,
+        // ]);
 
-        Produto::create([
-            'nome' => 'Relógio de Pulso',
-            'preco' => 499.90,
-            'tamanho' => 'Único',
-            'descricao' => 'Relógio de pulso elegante, à prova d\'água até 50m.',
-            'quantidade' => 15,
-            'ativo' => true,
-        ]);
+        // Produto::create([
+        //     'nome' => 'Relógio de Pulso',
+        //     'preco' => 499.90,
+        //     'tamanho' => 'Único',
+        //     'descricao' => 'Relógio de pulso elegante, à prova d\'água até 50m.',
+        //     'quantidade' => 15,
+        //     'ativo' => true,
+        //     'imagem' => 'img/produtos/Relógio.webp'
+        // ]);
 
-        Produto::create([
-            'nome' => 'Chinelo Slide',
-            'preco' => 89.90,
-            'tamanho' => 'M',
-            'descricao' => 'Chinelo confortável, perfeito para o verão.',
-            'quantidade' => 70,
-            'ativo' => true,
-        ]);
+        // Produto::create([
+        //     'nome' => 'Chinelo Slide',
+        //     'preco' => 89.90,
+        //     'tamanho' => 'M',
+        //     'descricao' => 'Chinelo confortável, perfeito para o verão.',
+        //     'quantidade' => 70,
+        //     'ativo' => true,
+        // ]);
 
-        Produto::create([
-            'nome' => 'Mochila Escolar',
-            'preco' => 159.90,
-            'tamanho' => 'Único',
-            'descricao' => 'Mochila resistente com compartimento para notebook.',
-            'quantidade' => 35,
-            'ativo' => true,
-        ]);
+        // Produto::create([
+        //     'nome' => 'Mochila Escolar',
+        //     'preco' => 159.90,
+        //     'tamanho' => 'Único',
+        //     'descricao' => 'Mochila resistente com compartimento para notebook.',
+        //     'quantidade' => 35,
+        //     'ativo' => true,
+        // ]);
     }
 }

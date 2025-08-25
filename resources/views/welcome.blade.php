@@ -31,4 +31,36 @@
             </div>
         @endforeach
     </div>
+
+    {{-- <section class="categories-section">
+        <div class="categories-container">
+            <h2 class="categories-title">Navegue por Categorias</h2>
+            <div class="categories-grid">
+                <!-- Categoria 1 -->
+                <a href="#" class="category-card">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Vestidos" alt="[Imagem da categoria Vestidos]"
+                        class="category-image">
+                    <div class="category-overlay">
+                        <h3 class="category-text">Vestidos</h3>
+                    </div>
+                </a>
+                <!-- Categoria 2 -->
+                <a href="#" class="category-card">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Blusas" alt="[Imagem da categoria Blusas]"
+                        class="category-image">
+                    <div class="category-overlay">
+                        <h3 class="category-text">Blusas</h3>
+                    </div>
+                </a>
+                <!-- Categoria 3 -->
+                <a href="#" class="category-card">
+                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Acessórios"
+                        alt="[Imagem da categoria Acessórios]" class="category-image">
+                    <div class="category-overlay">
+                        <h3 class="category-text">Acessórios</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section> --}}
 @endsection

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProdutoRequest;
 use App\Models\Categoria;
 use App\Models\Produto;
+use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -77,7 +78,6 @@ class AdminController extends Controller
         }
     }
 
-
     public function editarProduto(Produto $produto)
     {
         $tamanhos = Produto::$tamanhosDisponiveis;
@@ -120,8 +120,7 @@ class AdminController extends Controller
         }
     }
 
-    public function deleteProduto(Produto $produto)
-    {
+    public function deleteProduto(Produto $produto){
         try {
             $produto->delete();
             return redirect()->route('index.admin.produto')->with('success', 'Produto deletado com sucesso.');
@@ -130,4 +129,5 @@ class AdminController extends Controller
             return back()->withInput()->with('error', 'Produto não atualizado.');
         }
     }
+
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\ClienteAdminController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\ProdutoController;
@@ -67,4 +68,9 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
     Route::get('/editarProduto/{produto}', [AdminController::class, 'editarProduto'])->name('editar.admin.produto');
     Route::put('/editarProduto/{produto}', [AdminController::class, 'updateProduto'])->name('update.admin.produto');
     Route::delete('/deleteProduto/{produto}', [AdminController::class, 'deleteProduto'])->name('delete.admin.produto');
+    
+    Route::get('/clientes', [ClienteAdminController::class, 'clientes'])->name('clientes.admin');
+    Route::get('/clientesDetalhes', [ClienteAdminController::class, 'clientesDetalhes'])->name('clientes.detalhes.admin');
+
+    
 });

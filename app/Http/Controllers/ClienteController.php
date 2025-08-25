@@ -97,4 +97,5 @@ class ClienteController extends Controller{
             return back()->withInput()->with('error', 'Ocorreu um erro ao atualizar as informações.');
         }
     }
+
 }

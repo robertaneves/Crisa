@@ -10,7 +10,7 @@
                 {{-- Coluna da Esquerda --}}
                 <div class="form-group">
                     <label for="imagens">Imagens do Produto</label> <br>
-                    <input type="file" name="imagens[]" id="imagens" multiple class="form-control">
+                    <input type="file" name="imagens[]" id="imagens" multiple class="form-control" value="{{ old('imagem', $produto->imagens) }}">
                 </div>
 
                 <div>

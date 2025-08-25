@@ -20,7 +20,7 @@
         <div class="layout-header-container">
             <a href="{{ route('layout') }}" class="layout-logo-link">
                 <img src="#" alt="Logo" class="layout-logo-image">
-                <span class="layout-logo-text">Loja Crisa</span>
+                <span class="layout-logo-text"></span>
             </a>
 
             <form action="#" method="GET" class="layout-desktop-search">
